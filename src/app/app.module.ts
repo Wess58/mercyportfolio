@@ -10,13 +10,17 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { ListComponent } from './components/blogs/list/list.component';
+import { DetailComponent } from './components/blogs/detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    ListComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
