@@ -7,14 +7,19 @@ import { BlogDetailComponent } from "./components/blogs/blog-detail/blog-detail.
 import { HomeComponent } from "./components/home/home.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  // { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'articles', component: BlogListComponent },
   { path: 'articles/:id', component: BlogDetailComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,
+    {
+      useHash: true,
+      scrollPositionRestoration: "enabled"
+    })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
