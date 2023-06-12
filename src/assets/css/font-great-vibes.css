@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/great-vibes/Great-Vibes-normal-400.eot);
+  src: local('Great Vibes'), url(../fonts/great-vibes/Great-Vibes-normal-400.ttf) format('truetype'), url(../fonts/great-vibes/Great-Vibes-normal-400.woff2) format('woff2'), url(../fonts/great-vibes/Great-Vibes-normal-400.svg#GreatVibes) format('svg'), url(../fonts/great-vibes/Great-Vibes-normal-400.woff) format('woff'), url(../fonts/great-vibes/Great-Vibes-normal-400.eot?#iefix) format('embedded-opentype');
+}

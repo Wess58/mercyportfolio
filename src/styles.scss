@@ -1,6 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import './assets/css/font-montserrat.css';
+@import "./assets/css/font-roboto.css";
+@import './assets/css/font-great-vibes.css';
  // @import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
 // @import '../node_modules/@fortawesome/fontawesome-free/css/solid.css';
 // @import '../node_modules/@fortawesome/fontawesome-free/css/brands.css';
 @import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+// color blue - #4673b6
+// color yellow - #f5be1d
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth !important;
+  overflow-x: hidden !important;
+  // background-color: #f8f9fa;
+
+}
+
+* img::selection {
+  background-color: transparent!important;
+}
+
+* img {
+  user-drag: none !important;
+  user-select: none !important;
+  -moz-user-select: none !important;
+  -webkit-user-drag: none !important;
+  -webkit-user-select: none !important;
+  -ms-user-select: none !important;
+}
+
+::selection {
+  // color: #f1f1f1;
+  // background-color: #80868b!important;
+}
+
+.section-description{
+  font-weight: 600;
+  color: #5f6063;
+  margin-bottom: 30px;
+}

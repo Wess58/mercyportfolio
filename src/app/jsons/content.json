@@ -1,0 +1,36 @@
+{
+  "landing": {
+    "title": "Changing Businesses & Lives",
+    "description": "Mercy Munyange is a Business and Product Development Expert with over twelve years of experience in Business Development, Digital Financial Services, Digital Solutions, Data Analytics & Customer Experience sectors. Her extensive experience spans in Kenya, Tanzania, Nigeria and Caribbean, USA specialized in strategy development and deployment of Technology solutions.",
+    "imgUrl": "assets/images/mercy-landing-pic.png"
+  },
+  "services": [{
+      "title": "New Day Communications",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "icon": "assets/images/business.svg"
+    },
+    {
+      "title": "Business Developer",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "icon": "assets/images/business-growth-two.svg"
+    },
+    {
+      "title": "Podcasts",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "icon": "assets/images/podcast.svg"
+    },
+    {
+      "title": "Articles",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "icon": "assets/images/articles.svg"
+    }
+  ],
+  "companies": {
+    "description": "Empowering incredible experiences at the top companies",
+    "companyImgs": [
+      "assets/images/safaricom.svg",
+      "assets/images/telkom_kenya.svg",
+      "assets/images/taxiye.svg"
+    ]
+  }
+}

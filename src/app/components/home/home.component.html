@@ -1,1 +1,70 @@
-<p>home works!</p>
+<div class="container-fluid home px-0">
+
+  <!-- LANDING SECTION -->
+  <main [@fadeIn]>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="content">
+            <img src="assets/images/yellow-blob.svg" id="yellow-blob" alt="illustration">
+            <h1>{{content.title}}</h1>
+            <p>{{content.description}}</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="illustration">
+            <span class="italic-name">Mercy Munyange</span>
+            <img class="mercy-img" [src]="content.imgUrl" alt="illustration">
+            <!-- <img src="assets/images/blue-blob.svg" id="blue-blob" alt="illustration"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- SERVICES SECTION -->
+  <div id="services">
+    <div class="container">
+      <div class="row" *ngIf="services.length" [@fadeInGrow]>
+        <div class="col-md-3" *ngFor="let service of services;index as i">
+          <div class="card">
+            <div class="icon-holder">
+              <img [src]="service.icon" alt="icon">
+            </div>
+            <h4>{{service.title}}</h4>
+            <p>{{service.description}}</p>
+            <span class="link">Learn more <span><i class="fas fa-angle-right"></i></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUSTED COMPANIES -->
+  <div id="companies">
+    <div class="container">
+      <p class="section-description">{{companies.description}}</p>
+      <div class="company-images">
+        <div class="company-img" *ngFor="let imgUrl of companies.companyImgs;index as i">
+          <img [src]="imgUrl" alt="company">
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-wave">
+      <img src="assets/images/grey-wave.svg" alt="">
+    </div>
+
+  </div>
+
+
+  <!-- PODCAST SECTION -->
+  <div id="podcasts">
+    <div class="container">
+      <h3>The walk <br> Podcast</h3>
+      <div class="yellow-border"></div>
+
+    </div>
+  </div>
+</div>

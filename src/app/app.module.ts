@@ -12,6 +12,10 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListComponent } from './components/blogs/list/list.component';
 import { DetailComponent } from './components/blogs/detail/detail.component';
+import { BlogListComponent } from './components/blogs/blog-list/blog-list.component';
+import { BlogDetailComponent } from './components/blogs/blog-detail/blog-detail.component';
+import { PodcastDetailComponent } from './components/podcasts/podcast-detail/podcast-detail.component';
+import { PodcastListComponent } from './components/podcasts/podcast-list/podcast-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { DetailComponent } from './components/blogs/detail/detail.component';
     FooterComponent,
     HomeComponent,
     ListComponent,
-    DetailComponent
+    DetailComponent,
+    BlogListComponent,
+    BlogDetailComponent,
+    PodcastDetailComponent,
+    PodcastListComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +36,7 @@ import { DetailComponent } from './components/blogs/detail/detail.component';
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

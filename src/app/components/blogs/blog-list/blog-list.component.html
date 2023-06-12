@@ -1,0 +1,67 @@
+
+<div class="blog-section">
+  <div class="container">
+
+
+    <div class="filter-section" [@fadeIn]>
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <h4>Blog</h4>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="filters">
+            <!-- <span (click)="sortBlogs()"><i class="fas sort-icon" [ngClass]="{'fa-sort-amount-up':!descending,'fa-sort-amount-down-alt':descending}"></i></span> -->
+
+            <input type="text" name="search-blog" id="search-blog" [(ngModel)]="searchBlog" placeholder="Search blog" (keyup)="searchBlogByTitle(searchBlog)">
+            <span *ngIf="!searchBlog" [@fadeIn]><i class="fas fa-search search-icon"></i></span>
+            <!-- <span *ngIf="searchBlog" [@fadeIn] (click)="resetForm()"><i class="fas fa-times-circle reset-icon"></i></span> -->
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-notification">
+      <div class="notification-box" [@fadeInOut] *ngIf="showQuickNotification">
+        <p> link copied <span><i class="fas fa-check-circle ml-1"></i></span> </p>
+      </div>
+    </div>
+
+
+    <!-- <div class="not-found text-center" *ngIf="blogNotFound" [@fadeIn]>
+      <h2>Oops !</h2>
+      <p>We cannot find the blog you are looking for</p>
+      <button class="btn btn-back" (click)="resetForm()"><span><i class="fas fa-angle-left"></i></span> back to blogs</button>
+    </div> -->
+
+    <div class="row blog-listing" [hidden]="blogNotFound">
+      <div class="col-md-4 mt-5 d-flex" *ngFor="let blog of blogs">
+        <div class="card blog-item flex-fill">
+
+          <img class="blog-img flex-fill" src="{{blog.thumbnail}}" (click)="toBlogDetail(blog)">
+
+          <h4 class="blog-title flex-fill" (click)="toBlogDetail(blog)">{{blog.title}}</h4>
+
+          <div class="row">
+            <div class="col-6 col-md-6">
+
+              <small class="blog-pubDate flex-fill"><span><i class="far fa-calendar-alt"></i></span> {{blog.pubDate }}</small>
+              <div class="bottom-border"> </div>
+
+            </div>
+            <div class="col-6 col-md-6 text-right">
+
+              <span class="share" (click)="shareBlog(blog)"><i class="fas fa-share-alt"></i> <span class="tool-tip">share blog</span></span>
+
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

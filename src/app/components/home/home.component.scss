@@ -1,0 +1,194 @@
+.home {
+  main {
+    padding-top: 7vh;
+
+    .content {
+      padding: 3vh 0;
+      position: relative;
+      // background-image: url("../../../assets/images/yellow-blob.svg");
+      // background-position: -50px -20%;
+      // background-repeat: no-repeat!important;
+      // background-size: 50%;
+      h1 {
+        font-weight: 900;
+        color: #3c4043;
+        font-size: 4rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 0.98rem;
+      }
+
+      #yellow-blob {
+        position: absolute;
+        top: 0;
+        left: -40%;
+        z-index: -1;
+        height: 320px;
+      }
+    }
+
+    .illustration {
+      position: relative;
+      text-align: center;
+      background-image: url("../../../assets/images/yellow-blob-two.svg"),url("../../../assets/images/blue-blob.svg");
+      background-position: -60px -25%, -34px 10%;
+      background-repeat: no-repeat!important;
+      background-size: 50%,125%;
+
+      .italic-name {
+        font-family: 'Great Vibes', sans-serif;
+        font-size: 4rem;
+        // font-weight: 600;
+        position: absolute;
+        top: -4%;
+        right: -32%;
+        color: #3c4043;
+      }
+
+      .mercy-img {
+        height: 500px;
+        z-index: 10;
+        filter: drop-shadow(0 10px 5px #4673b640);
+        margin-left: -90px;
+      }
+
+      #blue-blob {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+      }
+    }
+  }
+  // *****************************
+  // services section
+  // *****************************
+  #services {
+    padding: 10vh 0;
+
+    .card {
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 5px 5px 0 0 rgba(0,0,0,0.09);
+      border: 1px solid #f1f1f1;
+      transition: all 0.2s;
+
+      &:hover {
+        box-shadow: 10px 10px 0 0 rgba(0,0,0,0.05);
+
+        .link {
+          span {
+            position: relative;
+            left: 10px;
+          }
+        }
+      }
+
+      .icon-holder {
+        margin-bottom: 15px;
+
+        img {
+          height: 35px;
+        }
+      }
+
+      h4 {
+        font-weight: 600;
+        font-size: 1.1rem;
+        min-height: 42px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: #5f6063;
+        margin-bottom: 15px;
+      }
+
+      .link {
+        cursor: pointer;
+        color: #5f6063;
+        font-size: 0.8rem;
+
+        & span {
+          transition: all 0.3s;
+          position: relative;
+          left: 5px;
+          top: 1px;
+        }
+      }
+    }
+  }
+  // *****************************
+  // COMPANIES SECTION
+  // *****************************
+  #companies {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding-top: 7vh;
+    position: relative;
+
+    .company-images {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+
+      .company-img {
+        img {
+          width: auto;
+          height: 50px;
+          filter: drop-shadow(0 2px 3px #0002);
+        }
+      }
+    }
+
+    .bottom-wave {
+      img {
+        width: 100vw;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background-color: #f8f9fa;
+        z-index: -1;
+      }
+    }
+  }
+  // *****************************
+  // PODCASTS SECTION
+  // *****************************
+  #podcasts {
+    padding-top: 15vh;
+
+    h3 {
+      font-weight: 900;
+      font-size: 3.5rem;
+      text-align: center;
+      color: #4673b6;
+      z-index: 10;
+    }
+
+    .yellow-border {
+      width: 300px;
+      height: 20px;
+      background-color: #f5be1d80;
+      margin: 0 auto;
+      margin-top: -40px;
+      transform: translate(-20%,30%);
+      position: relative;
+      z-index: -1!important;
+    }
+  }
+}
+@media (max-width: 1500px) {
+  .italic-name {
+    font-family: 'Great Vibes', sans-serif;
+    font-size: 3rem!important;
+    position: absolute;
+    top: 10%!important;
+    right: -15%!important;
+    color: #3c4043;
+  }
+}
