@@ -15,10 +15,10 @@
 
     .nav-link {
       // font-family: 'Roboto', sans-serif;
-      color: #3c4043;
+      color: #5f6063;
       position: relative;
       font-size: 0.9rem;
-
+      font-weight: 600;
       // font-weight: 600;
     }
 
@@ -26,7 +26,7 @@
       position: absolute;
       left: 0;
       height: 4px;
-      background: #4673b6;
+      background: #80868b;
       content: "";
       opacity: 0;
       transition: all 0.2s ease;
@@ -45,8 +45,21 @@
     }
   }
 
-  .active-link{
-    font-weight: 600;
+  .active-link {
     color: #4673b6!important;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 4px;
+      width: 40px;
+      background: #4673b6!important;
+      opacity: 1!important;
+      width: 40px!important;
+      border-radius: 20px;
+      bottom: 0;
+      transform: translateX(5px)!important;
+    }
   }
 }
