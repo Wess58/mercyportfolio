@@ -39,6 +39,11 @@ body {
   -ms-user-select: none !important;
 }
 
+*a , button{
+  outline: none!important;
+  box-shadow: none!important;
+}
+
 ::selection {
   // color: #f1f1f1;
   // background-color: #80868b!important;
@@ -48,4 +53,98 @@ body {
   font-weight: 600;
   color: #5f6063;
   margin-bottom: 30px;
+  text-align: center;
+
+}
+
+
+// *****************************
+// PODCASTS SECTION
+// *****************************
+.podcasts {
+  padding-top: 15vh;
+
+  h3 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    text-align: center;
+    color: #4673b6;
+    z-index: 10;
+  }
+
+  .yellow-border {
+    width: 300px;
+    height: 20px;
+    background-color: #f5be1d80;
+    margin: -40px auto 0;
+    transform: translate(-20%,30%);
+    position: relative;
+    z-index: -1!important;
+  }
+
+  .section-description {
+    width: 80%;
+    margin: 5vh auto 7vh;
+    font-size: 0.95rem;
+    // font-weight: 400;
+    span {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  .podcast-card {
+    border: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+    &:hover {
+      img {
+        // border: 1px solid #3c4043!important;
+        transform: scale(1.02);
+      }
+    }
+
+    .image-holder {
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #e1e1e1;
+        transition: all 0.2s;
+      }
+    }
+
+    h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #3c4043;
+    }
+  }
+
+  .btn-more-podcasts {
+    background-color: #f5be1d;
+    color: #3c4043;
+    padding: 10px 40px;
+    margin: 3vh auto;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 0;
+    // min-width: 200px;
+
+    &:hover {
+      i {
+        position: relative;
+        left: 15px;
+      }
+    }
+
+    i {
+      position: relative;
+      left: 10px;
+      transition: all 0.2s;
+    }
+  }
 }

@@ -12,10 +12,41 @@
 
   .nav-item {
     margin: 0 10px;
+
     .nav-link {
-      font-family: 'Roboto', sans-serif;
+      // font-family: 'Roboto', sans-serif;
       color: #3c4043;
+      position: relative;
+      font-size: 0.9rem;
+
       // font-weight: 600;
     }
+
+    .nav-link:after {
+      position: absolute;
+      left: 0;
+      height: 4px;
+      background: #4673b6;
+      content: "";
+      opacity: 0;
+      transition: all 0.2s ease;
+    }
+
+    .nav-link:after {
+      width: 40px;
+      border-radius: 20px;
+      bottom: 0;
+      transform: translateX(-10px);
+    }
+
+    .nav-link:hover:after {
+      opacity: 1;
+      transform: translateX(5px);
+    }
+  }
+
+  .active-link{
+    font-weight: 600;
+    color: #4673b6!important;
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { style, state, animate, transition, trigger, query, stagger } from '@angular/animations';
 
 import content from "../../jsons/content.json";
+import podcasts from "../../jsons/podcasts.json";
 
 @Component({
   selector: 'app-home',
@@ -30,9 +31,11 @@ export class HomeComponent implements OnInit {
   content: any = content.landing;
   companies: any = content.companies;
   services: any = content.services;
+  podcasts: any = podcasts.podcasts;
 
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit(): void {
     setTimeout(() => {

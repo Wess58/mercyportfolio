@@ -1,10 +1,13 @@
 .home {
   main {
     padding-top: 7vh;
+    background-color: #f8f9fa;
 
     .content {
       padding: 3vh 0;
       position: relative;
+      z-index: 10!important;
+
       // background-image: url("../../../assets/images/yellow-blob.svg");
       // background-position: -50px -20%;
       // background-repeat: no-repeat!important;
@@ -19,14 +22,14 @@
       p {
         font-size: 0.98rem;
       }
+    }
 
-      #yellow-blob {
-        position: absolute;
-        top: 0;
-        left: -40%;
-        z-index: -1;
-        height: 320px;
-      }
+    #yellow-blob {
+      position: absolute;
+      top: 0;
+      left: -40%;
+      z-index: 1!important;
+      height: 320px;
     }
 
     .illustration {
@@ -50,7 +53,7 @@
       .mercy-img {
         height: 500px;
         z-index: 10;
-        filter: drop-shadow(0 10px 5px #4673b640);
+        filter: drop-shadow(0 10px 5px #4673b660);
         margin-left: -90px;
       }
 
@@ -65,17 +68,32 @@
   // services section
   // *****************************
   #services {
-    padding: 10vh 0;
+    scroll-margin-top: 8vh!important;
+    padding: 7vh 0;
+    background-color: #D1DCED;
+
+    .section-description {
+      width: 80%;
+      margin: 0 auto 8vh;
+      color: #4673b6;
+      font-size: 0.95rem;
+      // font-weight: 400;
+      span {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
 
     .card {
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 5px 5px 0 0 rgba(0,0,0,0.09);
+      box-shadow: 7px 7px 0 0 #4673b655;
       border: 1px solid #f1f1f1;
       transition: all 0.2s;
+      background-color: #fff;
 
       &:hover {
-        box-shadow: 10px 10px 0 0 rgba(0,0,0,0.05);
+        box-shadow: 12px 12px 0 0 #4673b633;
 
         .link {
           span {
@@ -89,7 +107,7 @@
         margin-bottom: 15px;
 
         img {
-          height: 35px;
+          height: 30px;
         }
       }
 
@@ -97,11 +115,12 @@
         font-weight: 600;
         font-size: 1.1rem;
         min-height: 42px;
-        margin-bottom: 15px;
+        // margin-bottom: 15px;
+        color: #3c4043;
       }
 
       p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         color: #5f6063;
         margin-bottom: 15px;
       }
@@ -154,31 +173,6 @@
         background-color: #f8f9fa;
         z-index: -1;
       }
-    }
-  }
-  // *****************************
-  // PODCASTS SECTION
-  // *****************************
-  #podcasts {
-    padding-top: 15vh;
-
-    h3 {
-      font-weight: 900;
-      font-size: 3.5rem;
-      text-align: center;
-      color: #4673b6;
-      z-index: 10;
-    }
-
-    .yellow-border {
-      width: 300px;
-      height: 20px;
-      background-color: #f5be1d80;
-      margin: 0 auto;
-      margin-top: -40px;
-      transform: translate(-20%,30%);
-      position: relative;
-      z-index: -1!important;
     }
   }
 }

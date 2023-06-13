@@ -4,9 +4,9 @@
   <main [@fadeIn]>
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6">
+        <div class="col-md-6 position-relative">
+          <img src="assets/images/yellow-blob.svg" id="yellow-blob" alt="illustration">
           <div class="content">
-            <img src="assets/images/yellow-blob.svg" id="yellow-blob" alt="illustration">
             <h1>{{content.title}}</h1>
             <p>{{content.description}}</p>
           </div>
@@ -26,6 +26,14 @@
   <!-- SERVICES SECTION -->
   <div id="services">
     <div class="container">
+
+      <p class="section-description"> 
+        <span> Mercy is a woman who loves doing business and cares about the well-being of her community. She has a track record of setting up businesses for success by transforming products and services using customer feedback
+          and relationship management. She believes that listening to customers and building trust with them are the keys to growth and innovation.
+        </span>
+      </p>
+
+
       <div class="row" *ngIf="services.length" [@fadeInGrow]>
         <div class="col-md-3" *ngFor="let service of services;index as i">
           <div class="card">
@@ -60,11 +68,36 @@
 
 
   <!-- PODCAST SECTION -->
-  <div id="podcasts">
+  <div id="podcasts" class="podcasts">
     <div class="container">
       <h3>The walk <br> Podcast</h3>
       <div class="yellow-border"></div>
 
+      <p class="section-description"> 
+        <span>
+          Mercy enjoys producing content to guide and inspire other entrepreneurs in her community. She shares her valuable insights and experiences on topics such as market research, branding, networking, and social responsibility. Through her
+          content, she hopes to empower others to pursue their passions and make a positive impact in the world.
+        </span>
+      </p>
+
+      <div class="row">
+        <div class="col-md-3" *ngFor="let podcast of podcasts;index as i">
+          <div class="card podcast-card" [routerLink]="['/podcast', i]">
+            <div class="image-holder">
+              <img [src]="podcast.imgUrl" alt="">
+            </div>
+
+            <h4>{{podcast.title}}</h4>
+
+            <!-- <div [innerHTML]="podcast.iframe | sanitizeIframe">        </div> -->
+          </div>
+        </div>
+      </div>
+
+
+      <div class="text-center">
+        <button class="btn btn-more-podcasts" [routerLink]="'/podcasts'">More episodes <i class="fa-solid fa-arrow-right-long"></i></button>
+      </div>
     </div>
   </div>
 </div>

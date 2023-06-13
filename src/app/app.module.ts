@@ -14,6 +14,7 @@ import { BlogListComponent } from './components/blogs/blog-list/blog-list.compon
 import { BlogDetailComponent } from './components/blogs/blog-detail/blog-detail.component';
 import { PodcastDetailComponent } from './components/podcasts/podcast-detail/podcast-detail.component';
 import { PodcastListComponent } from './components/podcasts/podcast-list/podcast-list.component';
+import { SanitizeIframePipe } from './pipes/sanitize-iframe.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PodcastListComponent } from './components/podcasts/podcast-list/podcast
     BlogListComponent,
     BlogDetailComponent,
     PodcastDetailComponent,
-    PodcastListComponent
+    PodcastListComponent,
+    SanitizeIframePipe
   ],
   imports: [
     BrowserModule,

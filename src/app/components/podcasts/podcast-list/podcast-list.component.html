@@ -1,1 +1,41 @@
-<p>podcast-list works!</p>
+<div class="podcasts position-relative" [@fadeIn]>
+  <img src="assets/images/yellow-blob.svg" id="yellow-blob-podcasts" alt="">
+
+  <img src="assets/images/blue-blob-2.svg" id="blue-blob-podcasts" alt="">
+
+
+  <div class="container">
+
+
+    <h3>The walk <br> Podcast</h3>
+    <div class="yellow-border"></div>
+
+    <p class="section-description"> 
+      <span>
+        Mercy enjoys producing content to guide and inspire other entrepreneurs in her community. She shares her valuable insights and experiences on topics such as market research, branding, networking, and social responsibility. Through her
+        content, she hopes to empower others to pursue their passions and make a positive impact in the world.
+      </span>
+    </p>
+
+    <div class="podcast-link-container" *ngIf="podcasts.length" [@fadeIn]>
+      <a class="btn btn-podcast-link" *ngFor="let podcastLink of podcastLinks;index as i" [href]="podcastLink.link" target="_blank">Listen on {{podcastLink.title}}</a>
+    </div>
+
+    <div class="podcast-listing">
+      <div class="row" *ngIf="podcasts.length" [@fadeInGrow]>
+        <div class="col-md-3" *ngFor="let podcast of podcasts;index as i">
+          <div class="card podcast-card" [routerLink]="['/podcast', i]">
+            <div class="image-holder">
+              <img [src]="podcast.imgUrl" alt="">
+            </div>
+
+            <h4>{{podcast.title}}</h4>
+
+            <!-- <div [innerHTML]="podcast.iframe | sanitizeIframe">        </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
