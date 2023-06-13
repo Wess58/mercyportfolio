@@ -1,1 +1,101 @@
-<p>podcast-detail works!</p>
+<div class="container-fluid podcast-detail" *ngIf="currentPodcast" [@fadeIn]>
+  <div class="podcast-landing-section">
+    <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="row align-items-center">
+            <div class="col-md-5">
+              <div class="podcast-image-holder">
+                <img [src]="currentPodcast.imgUrl" alt="image">
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="content">
+                <span class="podcast-name">The walk by Mercy Munyange Podcast</span>
+                <span class="episode-title">{{currentPodcast.title}}</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bottom-wave">
+      <img src="assets/images/light-blue-wave.svg" alt="">
+    </div>
+  </div>
+
+
+  <div class="podcast-content">
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-7">
+
+          <span class="listen-on-text">
+            <span>listen on : </span>
+            <a target="_blank">APPLE PODCASTS</a> | <a  target="_blank">SPOTIFY</a>
+          </span>
+          <div class="podcast-embed" [innerHTML]="currentPodcast.iframe | sanitizeIframe"> </div>
+
+          <p class="podcast-description">{{currentPodcast.description}}</p>
+
+
+          <div class="share-on-socials">
+            <h5>Share on social?</h5>
+
+            <span class="share-instructions">Hey, thank you so much for listening to this episode of my podcast. I hope you enjoyed it and learned something new. If you did, I have a small favor to ask you. <br><br> Please share this podcast with
+              your friends
+              on social media. It would mean the world to me and it would help me reach more people who might benefit from my content. Sharing is easy, just click on your preffered the social channel, and tag me <strong>@mukami.mercy</strong>.
+            </span>
+
+            <div class="social-links">
+              <a [href]="shareOnWhatsapp()" data-action="share/whatsapp/share" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span class="tool-tip">Whatsapp</span>
+              </a>
+              <a [href]="shareOnTwitter()" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+                <span class="tool-tip">&nbsp;Twitter&nbsp;</span>
+              </a>
+              <a [href]="shareOnFacebook()" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+                <span class="tool-tip">Facebook</span>
+              </a>
+              <a (click)="copyLink()">
+                <i class="fa-solid fa-link"></i>
+                <span class="tool-tip">{{isCopied ? ' Copied ! ' : 'Copy link'}}</span>
+              </a>
+            </div>
+
+            <span class="share-instructions"> And don't forget to follow on <a href="https://podcasts.apple.com/ke/podcast/the-walk-by-mercy-munyanges-podcast/id1690340521" target="_blank">Apple Podcasts</a> or <a
+                href="https://open.spotify.com/show/0k8ycpNhaiLof1kutoI7dh?si=86bfc174c7454b5e" target="_blank">Spotify</a> to the show so you never miss an episode.
+            </span>
+          </div>
+
+        </div>
+        <div class="col-md-3">
+          <div class="podcasts-listing">
+            <h4>OTHER PODCASTS</h4>
+
+            <div class="podcast-item" *ngFor="let podcast of podcasts.slice(0,10);index as i" [hidden]="i === +currentPodcastIndex" [routerLink]="['/podcast', i]" (click)="getCurrentPodcast()">
+              <div class="image-holder">
+                <img [src]="podcast.imgUrl" alt="image">
+              </div>
+              <div>
+                <span class="podcast-title">{{podcast.title}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+</div>
