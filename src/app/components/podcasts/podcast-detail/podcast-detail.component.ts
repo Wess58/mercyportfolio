@@ -40,10 +40,12 @@ export class PodcastDetailComponent implements OnInit {
   getCurrentPodcast(): void {
     setTimeout(() => {
       this.currentPodcastIndex = this.activatedRoute.snapshot.params['index'] ?? 0;
-
       this.currentPodcast = this.podcasts[this.currentPodcastIndex];
-
     }, 1);
+
+    setTimeout(() => {
+      window.scroll(0, 0);
+    }, 10);
   }
 
   shareOnWhatsapp(): any {

@@ -63,3 +63,24 @@
     }
   }
 }
+@media (max-width: 1000px) {
+  .navbar-brand {
+    img {
+      height: 40px!important;
+      filter: drop-shadow(0 5px 2px #4673b640);
+    }
+  }
+
+  .navbar-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .nav-item{
+      margin: 0 15px;
+    }
+  }
+}
+@media (min-width: 500px) {
+
+}

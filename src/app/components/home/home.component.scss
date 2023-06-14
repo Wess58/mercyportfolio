@@ -2,12 +2,12 @@
   main {
     padding-top: 7vh;
     background-color: #f8f9fa;
+    overflow-x: hidden;
 
     .content {
       padding: 3vh 0;
       position: relative;
       z-index: 10!important;
-
       // background-image: url("../../../assets/images/yellow-blob.svg");
       // background-position: -50px -20%;
       // background-repeat: no-repeat!important;
@@ -15,12 +15,28 @@
       h1 {
         font-weight: 900;
         color: #3c4043;
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin-bottom: 20px;
       }
 
       p {
-        font-size: 0.98rem;
+        font-size: 0.9rem;
+      }
+
+      .btn-cta {
+        background-color: #f5be1d;
+        border: 1px solid #f5be1d;
+        border-radius: 0;
+        font-style: 0.9rem;
+        letter-spacing: 1px;
+        color: #3c4043;
+        font-weight: 600;
+        padding: 10px 30px;
+
+        &:hover {
+          // background-color: #4673b6;
+          // color: #f8f9fa;
+        }
       }
     }
 
@@ -86,6 +102,7 @@
 
     .card {
       padding: 20px;
+      margin-bottom: 20px;
       border-radius: 8px;
       box-shadow: 7px 7px 0 0 #4673b655;
       border: 1px solid #f1f1f1;
@@ -113,7 +130,7 @@
 
       h4 {
         font-weight: 600;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         min-height: 42px;
         // margin-bottom: 15px;
         color: #3c4043;
@@ -185,4 +202,81 @@
     right: -15%!important;
     color: #3c4043;
   }
+}
+@media (max-width: 1100px) {
+  .illustration {
+    background-image: url("../../../assets/images/blue-blob.svg")!important;
+    background-position: -50px 50px!important;
+    background-repeat: no-repeat!important;
+    background-size: 125%!important;
+  }
+
+  .italic-name {
+    display: none;
+    // position: absolute;
+    // top: -15%!important;
+    // right: -5%!important;
+  }
+
+  #services {
+    padding: 5vh 0 7vh !important;
+
+    h4 {
+      font-size: 1rem!important;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: #5f6063;
+      margin-bottom: 15px;
+    }
+  }
+
+  #companies {
+    padding: 5vh 0 !important;
+
+    .bottom-wave {
+      display: none;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  main {
+    padding-top: 5vh!important;
+
+    h1 {
+      font-size: 3rem!important;
+    }
+
+    p {
+      font-size: 0.8rem!important;
+    }
+
+    .illustration {
+      background-image: url("../../../assets/images/blue-blob.svg")!important;
+      background-position: -50px 50px!important;
+      background-repeat: no-repeat!important;
+      background-size: 135%!important;
+    }
+
+    .mercy-img {
+      height: 450px!important;
+      z-index: 10;
+      filter: drop-shadow(0 10px 5px #4673b660);
+      margin-left: -90px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .company-images {
+
+    .company-img {
+      img {
+        height: 35px!important;
+        margin: 15px;
+      }
+    }
+  }
+
 }

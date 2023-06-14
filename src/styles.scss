@@ -2,13 +2,10 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import './assets/css/font-montserrat.css';
 @import "./assets/css/font-roboto.css";
-@import './assets/css/font-great-vibes.css';
- // @import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
+@import './assets/css/font-great-vibes.css'; // @import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
 // @import '../node_modules/@fortawesome/fontawesome-free/css/solid.css';
 // @import '../node_modules/@fortawesome/fontawesome-free/css/brands.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
-// ng build --base-href https://wess58.github.io/mercyportfolio/ --output-path docs && git add . && git commit -m "docs ready for deployment" && git push
-
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.css'; // ng build --base-href https://wess58.github.io/mercyportfolio/ --output-path docs && git add . && git commit -m "docs ready for deployment" && git push
 // color blue - #4673b6
 // color yellow - #f5be1d
 
@@ -23,7 +20,6 @@ body {
   scroll-behavior: smooth !important;
   overflow-x: hidden !important;
   // background-color: #f8f9fa;
-
 }
 
 * img::selection {
@@ -39,7 +35,8 @@ body {
   -ms-user-select: none !important;
 }
 
-*a , button{
+*a,
+button {
   outline: none!important;
   box-shadow: none!important;
 }
@@ -49,25 +46,24 @@ body {
   // background-color: #80868b!important;
 }
 
-.container-fluid{
+.container-fluid {
   padding-left: 0;
   padding-right: 0;
 }
 
-.section-description{
+.section-description {
   font-weight: 600;
   color: #5f6063;
   margin-bottom: 30px;
   text-align: center;
-
 }
-
-
 // *****************************
 // PODCASTS SECTION
 // *****************************
+
 .podcasts {
   padding-top: 15vh;
+  overflow-x: hidden;
 
   h3 {
     font-weight: 900;
@@ -138,7 +134,6 @@ body {
     letter-spacing: 1px;
     border-radius: 0;
     // min-width: 200px;
-
     &:hover {
       i {
         position: relative;
@@ -150,6 +145,62 @@ body {
       position: relative;
       left: 10px;
       transition: all 0.2s;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .podcasts {
+    padding: 5vh 0 !important;
+  }
+}
+@media (max-width: 500px) {
+  .podcasts {
+    .yellow-border {
+      width: 230px;
+    }
+
+    .col-lg-3,
+    .col-md-4 {
+      &:last-child {
+        .podcast-card {
+          border-bottom: none!important;
+        }
+      }
+    }
+
+    .podcast-card {
+      border: none;
+      cursor: pointer;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #e1e1e1!important;
+      border-radius: 0!important;
+      align-items: center;
+
+      &:hover {
+        img {
+          transform: scale(1)!important;
+        }
+      }
+
+      .image-holder {
+        margin-right: 10px!important;
+        display: inline-block;
+
+        img {
+          width: 60px!important;
+          height: 60px!important;
+          border-radius: 6px;
+          object-fit: cover;
+        }
+      }
+
+      h4 {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #3c4043;
+      }
     }
   }
 }

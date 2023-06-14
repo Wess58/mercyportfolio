@@ -9,9 +9,10 @@
           <div class="content">
             <h1>{{content.title}}</h1>
             <p>{{content.description}}</p>
+            <button class="btn btn-cta">Tell me more</button>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 d-none d-md-block">
           <div class="illustration">
             <span class="italic-name">Mercy Munyange</span>
             <img class="mercy-img" [src]="content.imgUrl" alt="illustration">
@@ -35,7 +36,7 @@
 
 
       <div class="row" *ngIf="services.length" [@fadeInGrow]>
-        <div class="col-md-3" *ngFor="let service of services;index as i">
+        <div class="col-md-6 col-lg-3" *ngFor="let service of services;index as i">
           <div class="card">
             <div class="icon-holder">
               <img [src]="service.icon" alt="icon">
@@ -81,7 +82,7 @@
       </p>
 
       <div class="row">
-        <div class="col-md-3" *ngFor="let podcast of podcasts;index as i">
+        <div class="col-md-4 col-lg-3" *ngFor="let podcast of podcasts;index as i">
           <div class="card podcast-card" [routerLink]="['/podcast', i]">
             <div class="image-holder">
               <img [src]="podcast.imgUrl" alt="">
