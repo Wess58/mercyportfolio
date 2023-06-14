@@ -1,8 +1,10 @@
 .home {
   main {
     padding-top: 7vh;
+    padding-bottom: 5vh;
     background-color: #f8f9fa;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    position: relative;
 
     .content {
       padding: 3vh 0;
@@ -58,11 +60,11 @@
 
       .italic-name {
         font-family: 'Great Vibes', sans-serif;
-        font-size: 4rem;
+        font-size: 3.5rem;
         // font-weight: 600;
         position: absolute;
-        top: -4%;
-        right: -32%;
+        top: 4%;
+        right: -25%;
         color: #3c4043;
       }
 
@@ -79,13 +81,26 @@
         width: 100%;
       }
     }
+
+    .bottom-wave {
+      img {
+        width: 100vw;
+        position: absolute;
+        bottom: -80px;
+        left: 0;
+        right: 0;
+        // background-color: red;
+        // background-image: linear-gradient(to bottom, transparent 10%, #fff 10%);
+        z-index: 10!important;
+      }
+    }
   }
   // *****************************
   // services section
   // *****************************
   #services {
     scroll-margin-top: 8vh!important;
-    padding: 7vh 0;
+    padding: 9vh 0;
     background-color: #D1DCED;
 
     .section-description {
@@ -164,6 +179,7 @@
     text-align: center;
     background-color: #f8f9fa;
     padding-top: 7vh;
+    padding-bottom: 5vh;
     position: relative;
 
     .company-images {
@@ -185,10 +201,10 @@
       img {
         width: 100vw;
         position: absolute;
-        top: 50px;
+        bottom: -80px;
         left: 0;
         right: 0;
-        background-color: #f8f9fa;
+        background-image: linear-gradient(to bottom, transparent 10%, #fff 10%);
         z-index: -1;
       }
     }
@@ -197,14 +213,23 @@
 @media (max-width: 1500px) {
   .italic-name {
     font-family: 'Great Vibes', sans-serif;
-    font-size: 3rem!important;
+    font-size: 2.7rem!important;
     position: absolute;
     top: 10%!important;
-    right: -15%!important;
+    right: -10%!important;
     color: #3c4043;
   }
 }
 @media (max-width: 1100px) {
+  main {
+    .bottom-wave {
+      img {
+        position: absolute;
+        bottom: -50px!important;
+      }
+    }
+  }
+
   .illustration {
     background-image: url("../../../assets/images/blue-blob.svg")!important;
     background-position: -50px 50px!important;
@@ -237,7 +262,10 @@
     padding: 5vh 0 !important;
 
     .bottom-wave {
-      display: none;
+      img {
+        position: absolute;
+        bottom: -50px!important;
+      }
     }
   }
 }
@@ -277,13 +305,19 @@
   }
 }
 @media (max-width: 600px) {
-  main{
+  main {
     .content {
-      padding: 3vh 0;
-      padding-bottom: 7vh!important;
+      padding: 3vh 0 7vh !important;
     }
 
+    .bottom-wave {
+      img {
+        position: absolute;
+        bottom: -20px!important;
+      }
+    }
   }
+
   .company-images {
     .company-img {
       img {
@@ -297,6 +331,17 @@
     .card {
       p {
         min-height: auto!important;
+      }
+    }
+  }
+
+  #companies {
+    padding: 5vh 0 !important;
+
+    .bottom-wave {
+      img {
+        position: absolute;
+        bottom: -20px!important;
       }
     }
   }
