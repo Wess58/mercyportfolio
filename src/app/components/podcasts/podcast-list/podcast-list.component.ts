@@ -29,14 +29,15 @@ import podcasts from "../../../jsons/podcasts.json";
 export class PodcastListComponent implements OnInit {
 
   podcasts: any = [];
-  podcastLinks:any = podcasts.podcastLinks;
+  podcastLinks: any = podcasts.podcastLinks;
 
 
   constructor() { }
 
   ngOnInit(): void {
-    window.scroll(0,0);
-
+    setTimeout(() => {
+      window.scroll(0, 0);
+    }, 10);
 
     setTimeout(() => {
       this.podcasts = podcasts.podcasts;
