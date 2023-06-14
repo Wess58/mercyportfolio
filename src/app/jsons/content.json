@@ -6,23 +6,27 @@
   },
   "services": [{
       "title": "New Day Communications",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      "icon": "assets/images/business.svg"
+      "description": "New Day Communications is a leading provider of innovative and value-added mobile content solutions for enterprises and consumers in the dynamic mobile telecommunications market.",
+      "icon": "assets/images/business.svg",
+      "link": ""
     },
     {
       "title": "Business Developer",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      "icon": "assets/images/business-growth-two.svg"
+      "description": "Delivering results in project and product management, strategy formulation, customer journey mapping, business process development and SME scale through operationalization and management.",
+      "icon": "assets/images/business-growth-two.svg",
+      "link": "/about"
     },
     {
       "title": "Podcasts",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      "icon": "assets/images/podcast.svg"
+      "description": "A master content creator in crafting engaging and informative content that helps listeners to grow their businesses and themselves to make a positive difference in their community and the world.",
+      "icon": "assets/images/podcast.svg",
+      "link": "/podcasts"
     },
     {
       "title": "Articles",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      "icon": "assets/images/articles.svg"
+      "description": "Feeling stuck or frustrated with your business? Do you wish to break free from the limitations and challenges that are holding your life back? Then check out my articles that will inspire and transform you with practical tips!",
+      "icon": "assets/images/articles.svg",
+      "link": "/articles"
     }
   ],
   "companies": {

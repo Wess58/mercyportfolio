@@ -131,7 +131,7 @@
       h4 {
         font-weight: 600;
         font-size: 1.05rem;
-        min-height: 42px;
+        min-height: 40px;
         // margin-bottom: 15px;
         color: #3c4043;
       }
@@ -140,6 +140,7 @@
         font-size: 0.85rem;
         color: #5f6063;
         margin-bottom: 15px;
+        min-height: 190px;
       }
 
       .link {
@@ -225,10 +226,10 @@
       font-size: 1rem!important;
     }
 
-    p {
-      font-size: 0.85rem;
-      color: #5f6063;
-      margin-bottom: 15px;
+    .card {
+      p {
+        min-height: 250px!important;
+      }
     }
   }
 
@@ -266,12 +267,24 @@
       margin-left: -90px;
     }
   }
+
+  #services {
+    .card {
+      p {
+        min-height: 150px!important;
+      }
+    }
+  }
 }
-
 @media (max-width: 600px) {
+  main{
+    .content {
+      padding: 3vh 0;
+      padding-bottom: 7vh!important;
+    }
 
+  }
   .company-images {
-
     .company-img {
       img {
         height: 35px!important;
@@ -280,4 +293,11 @@
     }
   }
 
+  #services {
+    .card {
+      p {
+        min-height: auto!important;
+      }
+    }
+  }
 }

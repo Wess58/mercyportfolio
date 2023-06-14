@@ -9,7 +9,7 @@
           <div class="content">
             <h1>{{content.title}}</h1>
             <p>{{content.description}}</p>
-            <button class="btn btn-cta">Tell me more</button>
+            <button class="btn btn-cta" [routerLink]="'/about'">Tell me more</button>
           </div>
         </div>
         <div class="col-md-6 d-none d-md-block">
@@ -43,7 +43,7 @@
             </div>
             <h4>{{service.title}}</h4>
             <p>{{service.description}}</p>
-            <span class="link">Learn more <span><i class="fas fa-angle-right"></i></span></span>
+            <span class="link" [routerLink]="service.link">Learn more <span><i class="fas fa-angle-right"></i></span></span>
           </div>
         </div>
       </div>

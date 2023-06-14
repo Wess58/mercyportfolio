@@ -5,11 +5,13 @@ import { PodcastDetailComponent } from "./components/podcasts/podcast-detail/pod
 import { BlogListComponent } from "./components/blogs/blog-list/blog-list.component";
 import { BlogDetailComponent } from "./components/blogs/blog-detail/blog-detail.component";
 import { HomeComponent } from "./components/home/home.component";
+import { AboutComponent } from "./components/about/about.component";
 
 const routes: Routes = [
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'articles', component: BlogListComponent },
   { path: 'articles/:id', component: BlogDetailComponent },
   { path: 'podcasts', component: PodcastListComponent },
