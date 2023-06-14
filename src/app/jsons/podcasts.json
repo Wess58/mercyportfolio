@@ -27,14 +27,18 @@
       "iframe": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/5XxRYOKqdKh5xCJ9Tjyotl?utm_source=generator\" width=\"100%\" height=\"150\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
       "time":"6 min"
     }
-  ],
+  ],  
   "podcastLinks": [{
       "title": "Apple podcasts",
       "link": "https://podcasts.apple.com/ke/podcast/the-walk-by-mercy-munyanges-podcast/id1690340521"
     },
     {
-      "title": "spotify",
+      "title": "Spotify",
       "link": "https://open.spotify.com/show/0k8ycpNhaiLof1kutoI7dh?si=8b5fbcfaa30b48d7"
+    },
+    {
+      "title": "Youtube",
+      "link": "https://www.youtube.com/@thewalkbymercymunyange289"
     },
     {
       "title": "Citizen podcasts",

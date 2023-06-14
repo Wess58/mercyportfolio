@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { style, state, animate, transition, trigger } from '@angular/animations';
+import { style, state, animate, transition, trigger, query, stagger } from '@angular/animations';
 
 import { MediumService } from "../../../services/medium.service";
 
@@ -12,13 +12,17 @@ import { MediumService } from "../../../services/medium.service";
     trigger('fadeIn', [
       transition(':enter', [   // :enter is alias to 'void => *'
         style({ opacity: 0 }),
-        animate(600, style({ opacity: 1 }))
+        animate(500, style({ opacity: 1 }))
       ])
     ]),
-    trigger('fadeInOut', [
-      transition(':enter', [   // :enter is alias to 'void => *'
-        style({ opacity: 0, marginTop: 20 }),
-        animate('300ms ease', style({ opacity: 1, marginTop: 0 }))
+    trigger('fadeInGrow', [
+      transition(':enter', [
+        query(':enter', [
+          style({ opacity: 0, marginTop: 40 }),
+          stagger('150ms', [
+            animate('600ms ease', style({ opacity: 1, marginTop: 0 }))
+          ])
+        ], { optional: true })
       ])
     ])
   ]
