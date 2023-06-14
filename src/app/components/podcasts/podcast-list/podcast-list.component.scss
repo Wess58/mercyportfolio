@@ -65,6 +65,8 @@
     width: 400px;
     z-index: -1;
   }
+
+
 }
 @media (max-width: 500px) {
   #yellow-blob-podcasts {
@@ -77,5 +79,11 @@
     position: absolute;
     top: 350px!important;
     right: -60%!important;
+  }
+
+  .podcast-link-container {
+    .btn-podcast-link {
+      width:280px;
+    }
   }
 }
