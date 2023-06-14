@@ -2,8 +2,10 @@
   <a class="navbar-brand" [routerLink]="'/home'">
     <img src="assets/images/thewalk-logo.svg" alt="the walk logo">
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+
+  <button class="navbar-toggler d-block d-md-none" type="button" (click)="toggleIcon()">
+    <i class="fas fa-bars" id="menuIcon" *ngIf="!changeIcon" [@fadeIn]></i>
+    <i class="fas fa-times" id="menuIcon" *ngIf="changeIcon" [@fadeIn]></i>
   </button>
 
   <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -41,4 +43,30 @@
     </li> -->
 
   </ul>
+
+  <div class="side-menu" [ngClass]="{'open-side-menu':changeIcon}" (click)="toggleIcon()">
+
+    <ul>
+      <li class="nav-item" [routerLink]="'/home'" [ngClass]="{'active-link-ms':router.url.includes('home')}">
+        <a class="nav-link-ms">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link-ms" href="#">About</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" [href]="'#services'" [ngClass]="{'active-link':router.url.includes('service')}">Services</a>
+      </li> -->
+      <li class="nav-item" [routerLink]="'/podcasts'" [ngClass]="{'active-link-ms':router.url.includes('podcast')}">
+        <a class="nav-link-ms" >Podcasts</a>
+      </li>
+      <li class="nav-item" [routerLink]="'/articles'" [ngClass]="{'active-link-ms':router.url.includes('article')}">
+        <a class="nav-link-ms" >Articles</a>
+      </li>
+      <li class="nav-item" [ngClass]="{'active-link-ms':router.url.includes('contact')}">
+        <a class="nav-link-ms">Contact</a>
+      </li>
+
+    </ul>
+
+  </div>
 </nav>

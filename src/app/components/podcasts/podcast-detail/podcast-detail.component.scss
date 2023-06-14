@@ -183,10 +183,9 @@
 
       .podcast-item {
         border-bottom: 2px solid #f5be1d;
-        padding: 10px 0;
+        padding: 10px 5px;
         cursor: pointer;
         display: flex;
-        align-items: center;
 
         &:last-child {
           border-bottom: none;
@@ -216,6 +215,13 @@
         .podcast-title {
           color: #5f6063;
           font-size: 0.8rem;
+          display: block;
+        }
+
+        .time{
+          font-size: 0.8rem;
+          color: #5f6063;
+          display: block;
         }
       }
     }
@@ -288,15 +294,30 @@
 
   .listen-on-text {
     text-align: center;
+    font-size: 0.8rem!important;
   }
 
   .podcasts-listing{
+
     .podcast-item{
+      .image-holder {
+        height: 70px!important;
+        width: 70px!important;
+        margin-right: 10px;
+
+        img {
+          width: auto;
+          height: 100%;
+          border-radius: 6px;
+          border: 1px solid #e1e1e1;
+        }
+      }
       .podcast-title {
         font-size: 0.9rem!important;
         font-weight: 600;
         color: #3c4043;
       }
+
     }
   }
 }

@@ -122,6 +122,12 @@ button {
       font-weight: 600;
       color: #3c4043;
     }
+
+    .time{
+      font-size: 0.8rem;
+      color: #5f6063;
+      display: block;
+    }
   }
 
   .btn-more-podcasts {
@@ -154,6 +160,15 @@ button {
   }
 }
 @media (max-width: 500px) {
+  .section-description {
+    font-weight: 600;
+    color: #5f6063;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 0.85rem!important;
+    line-height: 1.4rem;
+  }
+
   .podcasts {
     .yellow-border {
       width: 230px;
@@ -176,7 +191,7 @@ button {
       flex-direction: row;
       border-bottom: 1px solid #e1e1e1!important;
       border-radius: 0!important;
-      align-items: center;
+      // align-items: center;
 
       &:hover {
         img {
@@ -189,8 +204,8 @@ button {
         display: inline-block;
 
         img {
-          width: 60px!important;
-          height: 60px!important;
+          width: 70px!important;
+          height: 70px!important;
           border-radius: 6px;
           object-fit: cover;
         }
@@ -201,6 +216,8 @@ button {
         font-weight: 600;
         color: #3c4043;
       }
+
+
     }
   }
 }

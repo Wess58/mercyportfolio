@@ -88,8 +88,10 @@
               <img [src]="podcast.imgUrl" alt="">
             </div>
 
-            <h4>{{podcast.title}}</h4>
-
+            <div>
+              <h4>{{podcast.title}}</h4>
+              <span class="time">{{podcast.time}}</span>
+            </div>
             <!-- <div [innerHTML]="podcast.iframe | sanitizeIframe">        </div> -->
           </div>
         </div>
