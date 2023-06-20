@@ -37,7 +37,7 @@
 
           <span class="listen-on-text">
             <span>listen on : </span>
-            <a target="_blank">APPLE PODCASTS</a> | <a target="_blank">SPOTIFY</a>
+            <a [href]="currentPodcast.applePodcast" target="_blank" *ngIf="currentPodcast?.applePodcast">APPLE PODCASTS</a> <span *ngIf="currentPodcast?.applePodcast && currentPodcast?.spotify">|</span> <a [href]="currentPodcast.spotify" target="_blank" *ngIf="currentPodcast?.spotify">SPOTIFY</a>
           </span>
           <div class="podcast-embed" [innerHTML]="currentPodcast.iframe | sanitizeIframe"> </div>
 
@@ -82,7 +82,7 @@
           <div class="podcasts-listing">
             <h4>OTHER PODCASTS</h4>
 
-            <div class="podcast-item" *ngFor="let podcast of podcasts.slice(0,10);index as i" [hidden]="i === +currentPodcastIndex" [routerLink]="['/podcast', i]" (click)="getCurrentPodcast()">
+            <div class="podcast-item" *ngFor="let podcast of podcasts.slice(0,7);index as i" [hidden]="i === +currentPodcastIndex" [routerLink]="['/podcast', i]" (click)="getCurrentPodcast()">
               <div class="image-holder">
                 <img [src]="podcast.imgUrl" alt="image">
               </div>
