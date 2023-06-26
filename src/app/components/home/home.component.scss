@@ -201,11 +201,67 @@
       img {
         width: 100vw;
         position: absolute;
-        bottom: -80px;
+        bottom: -85px;
         left: 0;
         right: 0;
         background-image: linear-gradient(to bottom, transparent 10%, #fff 10%);
         z-index: -1;
+      }
+    }
+  }
+
+  #book {
+    text-align: center;
+    background-color: #6b9abe;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    position: relative;
+
+    .image-holder {
+      img {
+        width: 100%;
+      }
+    }
+
+    .content {
+      span {
+        text-align: left;
+        margin-bottom: 20px;
+        display: block;
+        font-size: 0.9rem;
+        color: #f1f1f1;
+      }
+
+      .btn-get-book {
+        background-color: #f5be1d;
+        border-radius: 30px;
+        font-size: 1rem;
+        padding: 10px 30px;
+        font-weight: 600;
+        position: relative;
+        color: #3c4043;
+
+        i {
+          color: #3c4043;
+          margin-left: 10px;
+          font-size: 1.4rem;
+          position: relative;
+          top: 3px;
+          line-height: 1rem;
+        }
+      }
+    }
+
+    .bottom-wave {
+      img {
+        width: 100vw;
+        position: absolute;
+        bottom: -85px;
+        left: 0;
+        right: 0;
+        // background-color: red;
+        background-image: linear-gradient(to bottom, transparent 10%, #fff 10%);
+        z-index: 10!important;
       }
     }
   }
@@ -260,6 +316,22 @@
 
   #companies {
     padding: 5vh 0 !important;
+
+    .bottom-wave {
+      img {
+        position: absolute;
+        bottom: -50px!important;
+      }
+    }
+  }
+
+  #book {
+    padding: 3vh 0 !important;
+
+    .image-holder {
+      width: 50%;
+      margin: 0 auto;
+    }
 
     .bottom-wave {
       img {
@@ -337,6 +409,20 @@
 
   #companies {
     padding: 5vh 0 !important;
+
+    .bottom-wave {
+      img {
+        position: absolute;
+        bottom: -20px!important;
+      }
+    }
+  }
+
+  #book {
+    .image-holder {
+      width: 100%;
+      margin: 0 auto;
+    }
 
     .bottom-wave {
       img {

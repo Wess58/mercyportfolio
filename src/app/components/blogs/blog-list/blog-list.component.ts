@@ -7,7 +7,7 @@ import { MediumService } from "../../../services/medium.service";
 @Component({
   selector: 'app-blog-list',
   templateUrl: './blog-list.component.html',
-  styleUrls: ['./blog-list.component.scss'],
+  styleUrls: ['./blog-list.component.scss', '../../podcasts/podcast-list/podcast-list.component.scss'],
   animations: [
     trigger('fadeIn', [
       transition(':enter', [   // :enter is alias to 'void => *'
@@ -97,10 +97,8 @@ export class BlogListComponent implements OnInit {
   }
 
   toBlogDetail(blog: any): void {
-    this.router.navigate(['/blog/' + this.slugify(blog.title)], { state: { data: blog } });
-
+    this.router.navigate(['/articles/' + this.slugify(blog.title)]);
     // we want to persist this data even if there is a refresh
-    sessionStorage.setItem("blog", JSON.stringify(blog));
   }
 
   slugify(str: string): any {

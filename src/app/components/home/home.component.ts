@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { style, state, animate, transition, trigger, query, stagger } from '@angular/animations';
+import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import content from "../../jsons/content.json";
 import podcasts from "../../jsons/podcasts.json";
+
+import { MediumService } from "../../services/medium.service";
+
 
 @Component({
   selector: 'app-home',
@@ -32,17 +37,64 @@ export class HomeComponent implements OnInit {
   companies: any = content.companies;
   services: any = content.services;
   podcasts: any = podcasts.podcasts;
+  whatsappBookPurchaseMessage = 'Hello, I am interested in buying your book. I saw your website and got redirected to this WhatsApp chat. Your book sounds amazing and I\'m excited to read it. Can you please tell me how to proceed with the purchase? Thank you.';
+  blogs: any = [];
 
 
   constructor(
+    private sanitizer: DomSanitizer,
+    private mediumService: MediumService,
+    protected router: Router
   ) { }
 
   ngOnInit(): void {
     window.scroll(0, 0);
 
+    this.getAllPosts();
+
     setTimeout(() => {
       // this.services = content.services;
     }, 500);
+
+  }
+
+
+  shareOnWhatsapp(): any {
+    const whatsappLink = this.sanitizer.bypassSecurityTrustUrl('https://wa.me/254723547630?text=' + this.whatsappBookPurchaseMessage);
+    return whatsappLink;
+  }
+
+  getAllPosts(): void {
+    this.mediumService.getPosts().subscribe(
+      (res: any) => {
+
+        this.blogs = res.items;
+      },
+      (err: any) => {
+        console.log(err);
+      }
+    )
+  }
+
+  toBlogDetail(blog: any): void {
+    this.router.navigate(['/articles/' + this.slugify(blog.title)], { state: { data: blog } });
+
+    // we want to persist this data even if there is a refresh
+    sessionStorage.setItem("blog", JSON.stringify(blog));
+  }
+
+  slugify(str: string): any {
+    // check for spaces and replace with -
+    str = str.replace(/\s/g, '-');
+    // convert all letters to lower case
+    str = str.toLowerCase();
+
+    return str;
+  }
+
+  concatCategoryStrings(str: any): any {
+    str = str.join(' ');
+    return str.toLowerCase();
   }
 
 }

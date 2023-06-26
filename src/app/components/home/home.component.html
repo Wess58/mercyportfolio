@@ -107,4 +107,82 @@
       </div>
     </div>
   </div>
+
+  <!-- BOOK SECTION -->
+  <div id="book" class="book">
+    <div class="container">
+
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6">
+          <div class="image-holder">
+            <img src="assets/images/kingdom-encounter-poster.png" alt="book-poster">
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="content">
+
+            <span>
+              This book is more than just a memoir. It is a testimony of how God can transform a broken life into a beautiful masterpiece. I used to think I had it all figured out, but I was living in denial and pain. When I surrendered my life
+              to Jesus Christ, He showed me the truth about myself and His love for me. He healed my wounds and made me whole again.
+            </span>
+
+            <span>
+              It is also a guide for you to discover your own journey with God. It includes reflection points that will challenge you to examine your heart and your relationship with Him. You can write your thoughts and prayers on the
+              book as you go along. You may not have the same experiences as I did, but you can learn from them and apply them to your own situation – many paths can lead to the same destination.
+            </span>
+
+            <span>
+              Don't miss this opportunity to find your unexplored journey! This book will inspire you, encourage you and empower you to live the abundant life that God has promised you.
+            </span>
+
+            <div class="text-left">
+              <a class="btn btn-get-book" [href]="shareOnWhatsapp()" rel="external nofollow noopener" target="_blank">Get your copy <i class="fa-brands fa-whatsapp"></i> </a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bottom-wave">
+      <img src="assets/images/mid-blue-wave.svg" alt="">
+    </div>
+  </div>
+
+  <!-- PODCAST SECTION -->
+  <div id="articles" class="articles">
+    <div class="container">
+      <h3>Articles</h3>
+      <div class="yellow-border"></div>
+
+      <p class="section-description"> 
+        <span>
+          Feeling stuck or frustrated with your business? Do you wish to break free from the limitations and challenges that are holding your life back? Then check out my articles that will inspire and transform you with practical tips! </span>
+      </p>
+
+      <div class="podcasts-listing">
+        <div class="row" *ngIf="blogs.length" [@fadeInGrow]>
+          <div class="col-md-4 col-lg-3" *ngFor="let blog of blogs.slice(0,4);index as i">
+            <div class="card podcast-card" (click)="toBlogDetail(blog)">
+              <div class="image-holder">
+                <img [src]="blog.thumbnail" alt="image">
+              </div>
+
+              <div>
+                <h4>{{blog.title}}</h4>
+                <!-- <small class="blog-pubDate flex-fill"><span><i class="far fa-calendar-alt"></i></span> {{blog.pubDate }}</small> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="text-center" *ngIf="blogs.length > 4">
+        <button class="btn btn-more-podcasts" [routerLink]="'/podcasts'">More episodes <i class="fa-solid fa-arrow-right-long"></i></button>
+      </div>
+    </div>
+  </div>
 </div>
