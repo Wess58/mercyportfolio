@@ -36,8 +36,6 @@ export class BlogDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    window.scroll(0, 0);
-
     this.getBlogs();
   }
 
@@ -48,8 +46,10 @@ export class BlogDetailComponent implements OnInit {
 
     this.mediumService.getPosts().subscribe(
       (res: any) => {
+        window.scroll(0, 0);
+
         this.blogs = res.items;
-        
+
         this.blogs.forEach((blog: any, index: any) => {
 
           if (blog.title.toLowerCase().includes(this.unSlugify(blogName).toLowerCase())) {
