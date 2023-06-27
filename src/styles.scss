@@ -43,6 +43,10 @@ button {
   box-shadow: none!important;
 }
 
+* strong{
+  font-weight: 600;
+}
+
 ::selection {
   // color: #f1f1f1;
   // background-color: #80868b!important;
@@ -59,6 +63,21 @@ button {
   margin-bottom: 30px;
   text-align: center;
 }
+
+.btn-back{
+  background-color: transparent;
+  color: #3c4043;
+  padding: 5px 10px;
+  border-radius: 12px;
+  border: 1px solid #e1e1e1;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+
+  &:hover{
+    border: 1px solid #3c4043;
+  }
+}
+
 // *****************************
 // PODCASTS SECTION
 // *****************************
@@ -123,6 +142,7 @@ button {
       font-size: 0.9rem;
       font-weight: 600;
       color: #3c4043;
+      text-align: left;
     }
 
     .time{
@@ -157,7 +177,9 @@ button {
   }
 }
 
-
+// ***************************
+// ARTICLES GENERAL STYLING
+// ***************************
 .articles{
   text-align: center;
   background-color: #fff;
@@ -177,6 +199,15 @@ button {
     transform: translate(-20%,30%);
     position: relative;
     z-index: 0!important;
+  }
+
+  .illustration-holder{
+    img{
+      transform: scaleX(-1);
+      width: 80%;
+      filter: drop-shadow(0 20px 5px #0002);
+
+    }
   }
 
   .image-holder {

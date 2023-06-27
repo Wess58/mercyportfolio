@@ -1,9 +1,12 @@
-<div class="blog-detail" [@fadeIn]>
+<div class="blog-detail" *ngIf="blogs?.length" [@fadeIn] [@fadeIn]>
   <div class="container">
 
     <div class="row justify-content-center">
       <div class="col-md-8 col-lg-9">
-        <div>
+
+        <button class="btn btn-back" [routerLink]="'/articles'"><i class="fa-solid fa-arrow-left"></i></button>
+
+        <div  >
           <h3 class="blog-title">{{blog?.title}}</h3>
           <div [innerHTML]="blog?.content" class="content"></div>
 
@@ -38,7 +41,11 @@
             </span>
           </div>
         </div>
+
+        <button class="btn btn-back" [routerLink]="'/articles'"><i class="fa-solid fa-arrow-left"></i></button>
+
       </div>
+
       <div class="col-md-4 col-lg-3" *ngIf="blogs?.length > 1">
         <div class="podcasts-listing">
           <h4>OTHER ARTICLES</h4>

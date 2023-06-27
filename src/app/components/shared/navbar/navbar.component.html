@@ -16,7 +16,7 @@
       <a class="nav-link" [routerLink]="'/home'" [ngClass]="{'active-link':router.url.includes('home') || router.url.length < 2}">Home<span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">About</a>
+      <a class="nav-link" [routerLink]="'/about-mercy-munyange'" [ngClass]="{'active-link':router.url.includes('about')}">About</a>
     </li>
     <!-- <li class="nav-item">
       <a class="nav-link" [href]="'#services'" [ngClass]="{'active-link':router.url.includes('service')}">Services</a>
@@ -28,7 +28,7 @@
       <a class="nav-link" [routerLink]="'/articles'" [ngClass]="{'active-link':router.url.includes('article')}">Articles</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#" [ngClass]="{'active-link':router.url.includes('contact')}">Contact</a>
+      <a class="nav-link" href="#contact" [ngClass]="{'active-link':router.url.includes('contact')}">Contact</a>
     </li>
     <!-- <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -50,8 +50,8 @@
       <li class="nav-item" [routerLink]="'/home'" [ngClass]="{'active-link-ms':router.url.includes('home') || router.url.length < 2}">
         <a class="nav-link-ms">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link-ms" href="#">About</a>
+      <li class="nav-item" [routerLink]="'/about-mercy-munyange'" [ngClass]="{'active-link-ms':router.url.includes('about')}">
+        <a class="nav-link-ms">About</a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" [href]="'#services'" [ngClass]="{'active-link':router.url.includes('service')}">Services</a>
@@ -63,7 +63,7 @@
         <a class="nav-link-ms" >Articles</a>
       </li>
       <li class="nav-item" [ngClass]="{'active-link-ms':router.url.includes('contact')}">
-        <a class="nav-link-ms">Contact</a>
+        <a class="nav-link-ms" href="#contact">Contact</a>
       </li>
 
     </ul>

@@ -11,7 +11,7 @@ const routes: Routes = [
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'about-mercy-munyange', component: AboutComponent },
   { path: 'articles', component: BlogListComponent },
   { path: 'articles/:id', component: BlogDetailComponent },
   { path: 'podcasts', component: PodcastListComponent },
@@ -22,6 +22,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes,
     {
       useHash: true,
+      anchorScrolling: 'enabled',
       // scrollPositionRestoration: "enabled"
     })],
   exports: [RouterModule]

@@ -37,7 +37,6 @@ export class HomeComponent implements OnInit {
   companies: any = content.companies;
   services: any = content.services;
   podcasts: any = podcasts.podcasts;
-  whatsappBookPurchaseMessage = 'Hello, I am interested in buying your book. I saw your website and got redirected to this WhatsApp chat. Your book sounds amazing and I\'m excited to read it. Can you please tell me how to proceed with the purchase? Thank you.';
   blogs: any = [];
 
 
@@ -58,17 +57,12 @@ export class HomeComponent implements OnInit {
 
   }
 
-
-  shareOnWhatsapp(): any {
-    const whatsappLink = this.sanitizer.bypassSecurityTrustUrl('https://wa.me/254723547630?text=' + this.whatsappBookPurchaseMessage);
-    return whatsappLink;
-  }
-
   getAllPosts(): void {
     this.mediumService.getPosts().subscribe(
       (res: any) => {
 
         this.blogs = res.items;
+        // this.blogs = Array(5).fill(res.items[0]);
       },
       (err: any) => {
         console.log(err);
@@ -77,11 +71,10 @@ export class HomeComponent implements OnInit {
   }
 
   toBlogDetail(blog: any): void {
-    this.router.navigate(['/articles/' + this.slugify(blog.title)], { state: { data: blog } });
-
+    this.router.navigate(['/articles/' + this.slugify(blog.title)]);
     // we want to persist this data even if there is a refresh
-    sessionStorage.setItem("blog", JSON.stringify(blog));
   }
+
 
   slugify(str: string): any {
     // check for spaces and replace with -

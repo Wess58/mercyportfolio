@@ -1,0 +1,118 @@
+#book {
+  text-align: center;
+  background-color: #6b9abe;
+  padding-top: 10vh;
+  padding-bottom: 7vh;
+  position: relative;
+
+  .image-holder {
+    img {
+      width: 100%;
+    }
+  }
+
+  .content {
+    span {
+      text-align: left;
+      margin-bottom: 20px;
+      display: block;
+      font-size: 0.9rem;
+      color: #f1f1f1;
+    }
+  }
+
+  .book-purchase-links {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+
+    a {
+      position: relative;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      border: 2px solid #f5be1d;
+      background-color: transparent;
+      color: #f5be1d;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      text-decoration: none !important;
+      margin: 0 10px;
+      padding: 0 0 0 4px;
+      transition: all 0.2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f5be1d;
+        color: #4673b6;
+
+        span {
+          display: block!important;
+          z-index: 10;
+          position: absolute;
+          top: -30px;
+          left: -10px;
+          white-space: nowrap!important;
+          color: #fff!important;
+          background-color: #000;
+          border-radius: 4px;
+          font-size: 0.7rem!important;
+          padding: 2px 10px;
+          letter-spacing: normal;
+        }
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .bottom-wave {
+    img {
+      width: 100vw;
+      position: absolute;
+      bottom: -85px;
+      left: 0;
+      right: 0;
+      // background-color: red;
+      background-image: linear-gradient(to bottom, transparent 10%, #fff 10%);
+      z-index: 10!important;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  #book {
+    padding: 3vh 0 !important;
+
+    .image-holder {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .bottom-wave {
+      img {
+        position: absolute;
+        bottom: -50px!important;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  #book {
+    .image-holder {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .bottom-wave {
+      img {
+        position: absolute;
+        bottom: -20px!important;
+      }
+    }
+  }
+}
