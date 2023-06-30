@@ -350,6 +350,30 @@
       padding: 3vh 0 7vh !important;
     }
 
+    .row{
+      justify-content: center;
+    }
+
+    .illustration {
+      width: 100%;
+      text-align: center!important;
+      position: relative;
+      text-align: center;
+      background-image: url("../../../assets/images/yellow-blob-two.svg")!important;
+      background-position: -70px -50px!important;
+      background-repeat: no-repeat!important;
+      background-size: 50%,125%;
+
+      .mercy-img {
+        width: 100%;
+        height: auto!important;
+        z-index: 10;
+        filter: drop-shadow(0 10px 5px #4673b660);
+        margin-left: 0!important;
+        margin: 0 auto;
+      }
+    }
+
     .bottom-wave {
       img {
         position: absolute;
