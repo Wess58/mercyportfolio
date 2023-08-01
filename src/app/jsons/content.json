@@ -1,7 +1,7 @@
 {
   "landing": {
     "title": "Changing Businesses & Lives",
-    "description": "Mercy Munyange is a Business and Product Development Expert with over twelve years of experience in Business Development, Digital Financial Services, Digital Solutions, Data Analytics & Customer Experience sectors. Her extensive experience spans in Kenya, Tanzania, Nigeria and Caribbean, USA specialized in strategy development and deployment of Technology solutions.",
+    "description": "Mercy Munyange is a Business and Product Development Expert with over twelve years of experience in Business Development, Digital Financial Services, Digital Solutions, Data Analytics & Customer Experience sectors. Her extensive experience spans in Kenya, Tanzania, Nigeria and Caribbean (USA). She specialized in Strategy development, Product management and deployment of Technology solutions.",
     "imgUrl": "assets/images/mercy-landing-pic.png"
   },
   "services": [{
@@ -18,7 +18,7 @@
     },
     {
       "title": "Podcasts",
-      "description": "A master content creator in crafting engaging and informative content that helps listeners to grow their businesses and themselves to make a positive difference in their community and the world.",
+      "description": "A master content creator in crafting engaging and informative content that helps listeners to grow themselves and their businesses to make a positive difference in their community and the world.",
       "icon": "assets/images/podcast.svg",
       "link": "/podcasts"
     },
