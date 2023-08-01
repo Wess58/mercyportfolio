@@ -2,7 +2,7 @@
   // font-family: 'Didact Gothic', sans-serif!important;
   padding-top: 10vh;
 
-  
+
   .back-cta {
     font-size: 1.1rem;
     color: #80868b;
@@ -61,6 +61,14 @@
 
     ::ng-deep strong {
       font-weight: 600;
+    }
+
+    ::ng-deep ol, ::ng-deep ul {
+      li{
+        margin-bottom: 10px;
+        color: #5f6063;
+        font-size: 0.9rem;
+      }
     }
 
     ::ng-deep a {

@@ -42,7 +42,7 @@ export class BlogDetailComponent implements OnInit {
 
   getBlogs(): void {
 
-    const blogName = this.activatedRoute.snapshot.params['id'];
+    const localGuid = this.activatedRoute.snapshot.params['guid'];
 
     this.mediumService.getPosts().subscribe(
       (res: any) => {
@@ -52,7 +52,7 @@ export class BlogDetailComponent implements OnInit {
 
         this.blogs.forEach((blog: any, index: any) => {
 
-          if (blog.title.toLowerCase().includes(this.unSlugify(blogName).toLowerCase())) {
+          if (blog.guid.toLowerCase().includes(localGuid.toLowerCase())) {
             this.blog = blog;
             this.currentArticleIndex = index;
           }

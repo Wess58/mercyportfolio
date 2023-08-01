@@ -84,6 +84,8 @@ export class BlogListComponent implements OnInit {
         this.blogs.forEach((blog: any) => {
           blog.categories = this.concatCategoryStrings(blog.categories);
           blog.searchTerms = blog.title.toLowerCase() + ' ' + blog.categories.toLowerCase();
+          const splitGuid = blog.guid.split('/');
+          blog.localGuid = splitGuid[splitGuid.length - 1];
           // blog.pubDate = moment(blog.pubDate).format('LL');
           // console.log(this.blogs);
           // console.log(moment(blog.pubDate).format('LL'));
@@ -97,7 +99,7 @@ export class BlogListComponent implements OnInit {
   }
 
   toBlogDetail(blog: any): void {
-    this.router.navigate(['/articles/' + this.slugify(blog.title)]);
+    this.router.navigate(['/articles', blog.localGuid, this.slugify(blog.title)]);
     // we want to persist this data even if there is a refresh
   }
 
