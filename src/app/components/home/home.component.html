@@ -47,7 +47,7 @@
             </div>
             <h4>{{service.title}}</h4>
             <p>{{service.description}}</p>
-            <span class="link" [routerLink]="service.link">Learn more <span><i class="fas fa-angle-right"></i></span></span>
+            <span class="link" (click)="redirect(service.link)">Learn more <span><i class="fas fa-angle-right"></i></span></span>
           </div>
         </div>
       </div>

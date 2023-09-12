@@ -99,4 +99,12 @@ export class HomeComponent implements OnInit {
     return str.toLowerCase();
   }
 
+  redirect(link:any):void{
+    if (link.includes('https')) {
+      window.open(link, "_blank");
+    }else{
+      this.router.navigate([link]);
+    }
+  }
+
 }
