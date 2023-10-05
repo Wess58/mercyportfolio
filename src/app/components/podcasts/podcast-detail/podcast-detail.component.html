@@ -44,7 +44,7 @@
           </span>
           <div class="podcast-embed" [innerHTML]="currentPodcast.iframe | sanitizeIframe"> </div>
 
-          <p class="podcast-description">{{currentPodcast.description}}</p>
+          <div class="podcast-description" [innerHTML]="currentPodcast.description"></div>
 
 
           <div class="share-on-socials">
