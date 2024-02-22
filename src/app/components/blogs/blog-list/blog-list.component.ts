@@ -82,6 +82,10 @@ export class BlogListComponent implements OnInit {
         this.blogs = res.items;
 
         this.blogs.forEach((blog: any) => {
+
+          const emCollection = new DOMParser().parseFromString(blog.content, "text/html").documentElement.getElementsByTagName("figure");
+          const imgSrc = new DOMParser().parseFromString(emCollection[0].innerHTML, "text/html").querySelectorAll('img')[0].src;
+          blog.thumbnail = imgSrc;
           blog.categories = this.concatCategoryStrings(blog.categories);
           blog.searchTerms = blog.title.toLowerCase() + ' ' + blog.categories.toLowerCase();
           const splitGuid = blog.guid.split('/');
