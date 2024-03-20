@@ -40,12 +40,14 @@
 
           <span class="listen-on-text">
             <span>listen on : </span>
-            <a [href]="currentPodcast.applePodcast" target="_blank" *ngIf="currentPodcast?.applePodcast">APPLE PODCASTS</a> <span *ngIf="currentPodcast?.applePodcast && currentPodcast?.spotify">|</span> <a [href]="currentPodcast.spotify" target="_blank" *ngIf="currentPodcast?.spotify">SPOTIFY</a>
+            <a [href]="currentPodcast.applePodcast" target="_blank" *ngIf="currentPodcast?.applePodcast">APPLE PODCASTS</a> <span *ngIf="currentPodcast?.applePodcast && currentPodcast?.spotify">|</span> <a [href]="currentPodcast.spotify"
+              target="_blank" *ngIf="currentPodcast?.spotify">SPOTIFY</a>
           </span>
           <div class="podcast-embed" [innerHTML]="currentPodcast.iframe | sanitizeIframe"> </div>
 
           <div class="podcast-description" [innerHTML]="currentPodcast.description"></div>
 
+          <a class="support-link" href="https://www.buzzsprout.com/2197946/support" target="_blank">Support the show <i class="fa-solid fa-square-arrow-up-right"></i></a>
 
           <div class="share-on-socials">
             <h5>Share on social?</h5>
@@ -75,7 +77,8 @@
             </div>
 
             <span class="share-instructions"> And don't forget to follow on <a href="https://podcasts.apple.com/ke/podcast/the-walk-by-mercy-munyanges-podcast/id1690340521" target="_blank">Apple Podcasts</a> , <a
-                href="https://open.spotify.com/show/0k8ycpNhaiLof1kutoI7dh?si=86bfc174c7454b5e" target="_blank">Spotify</a>, <a href="https://www.youtube.com/@thewalkbymercymunyange289" target="_blank">Youtube</a> or <a href="https://baze.co.ke/lifestyle/show/the-walk-by-mercy-munyange">Blaze</a> to the show so you never miss an
+                href="https://open.spotify.com/show/0k8ycpNhaiLof1kutoI7dh?si=86bfc174c7454b5e" target="_blank">Spotify</a>, <a href="https://www.youtube.com/@thewalkbymercymunyange289" target="_blank">Youtube</a> or <a
+                href="https://baze.co.ke/lifestyle/show/the-walk-by-mercy-munyange">Blaze</a> to the show so you never miss an
               episode.
             </span>
           </div>

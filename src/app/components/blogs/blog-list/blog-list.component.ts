@@ -50,6 +50,11 @@ export class BlogListComponent implements OnInit {
     }, 10);
 
     this.getAllPosts();
+
+    const arr = [];
+    arr[1] = 3;
+    console.log(arr);
+
   }
 
 

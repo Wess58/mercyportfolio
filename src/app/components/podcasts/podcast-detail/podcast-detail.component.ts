@@ -72,5 +72,12 @@ export class PodcastDetailComponent implements OnInit {
     }, 1500);
   }
 
+  play(): void {
+    if (document.querySelector('iframe[src*="spotify.com/embed"]')) {
+      const spotifyEmbedWindow:any = document.querySelector('iframe[src*="spotify.com/embed"]') as HTMLIFrameElement;
+      spotifyEmbedWindow.contentWindow.postMessage({ command: 'toggle' }, '*');
+    }
+  }
+
 
 }

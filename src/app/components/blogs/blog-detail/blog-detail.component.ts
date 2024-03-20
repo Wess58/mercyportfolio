@@ -54,7 +54,7 @@ export class BlogDetailComponent implements OnInit {
           const emCollection = new DOMParser().parseFromString(blog.content, "text/html").documentElement.getElementsByTagName("figure");
           const imgSrc = new DOMParser().parseFromString(emCollection[0].innerHTML, "text/html").querySelectorAll('img')[0].src;
           blog.thumbnail = imgSrc;
-          
+
           if (blog.guid.toLowerCase().includes(localGuid.toLowerCase())) {
             this.blog = blog;
             this.currentArticleIndex = index;

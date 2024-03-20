@@ -2,6 +2,7 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import './assets/css/font-montserrat.css';
 @import "./assets/css/font-roboto.css";
+@import "./assets/css/font-karla.css";
 @import './assets/css/font-great-vibes.css'; // @import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
 // @import '../node_modules/@fortawesome/fontawesome-free/css/solid.css';
 // @import '../node_modules/@fortawesome/fontawesome-free/css/brands.css';
@@ -16,7 +17,9 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  // font-family: 'Montserrat', sans-serif;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth !important;
@@ -58,7 +61,7 @@ button {
 }
 
 .section-description {
-  font-weight: 600;
+  font-weight: 500;
   color: #5f6063;
   margin-bottom: 30px;
   text-align: center;
@@ -87,7 +90,7 @@ button {
   overflow-x: hidden;
 
   h3 {
-    font-weight: 900;
+    font-weight: 600;
     font-size: 3.5rem;
     text-align: center;
     color: #4673b6;
@@ -105,8 +108,8 @@ button {
   }
 
   .section-description {
-    width: 80%;
-    margin: 5vh auto 7vh;
+    width: 70%;
+    margin: 5vh auto 5vh;
     font-size: 0.95rem;
     // font-weight: 400;
     span {
@@ -140,7 +143,7 @@ button {
 
     h4 {
       font-size: 0.9rem;
-      font-weight: 600;
+      // font-weight: 600;
       color: #3c4043;
       text-align: left;
     }
@@ -224,15 +227,19 @@ button {
   .podcasts,.articles {
     padding: 5vh 0 !important;
   }
+
+  .section-description {
+    min-width: 90%;
+  }
 }
 @media (max-width: 500px) {
   .section-description {
-    font-weight: 600;
     color: #5f6063;
     margin-bottom: 30px;
     text-align: center;
     font-size: 0.85rem!important;
     line-height: 1.4rem;
+      min-width: 100%;
   }
 
   .podcasts,.articles {

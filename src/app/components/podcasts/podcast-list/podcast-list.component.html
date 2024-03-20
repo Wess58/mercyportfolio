@@ -1,7 +1,7 @@
 <div class="podcasts position-relative" [@fadeIn]>
-  <img src="assets/images/yellow-blob.svg" id="yellow-blob-podcasts" alt="">
+  <!-- <img src="assets/images/yellow-blob.svg" id="yellow-blob-podcasts" alt=""> -->
 
-  <img src="assets/images/blue-blob-2.svg" id="blue-blob-podcasts" alt="">
+  <!-- <img src="assets/images/blue-blob-2.svg" id="blue-blob-podcasts" alt=""> -->
 
 
   <div class="container">
@@ -18,26 +18,57 @@
     </p>
 
     <div class="podcast-link-container" *ngIf="podcasts.length" [@fadeIn]>
-      <a class="btn btn-podcast-link" *ngFor="let podcastLink of podcastLinks;index as i" [href]="podcastLink.link" target="_blank">Listen on {{podcastLink.title}}</a>
+      <a class="btn btn-podcast-link" *ngFor="let podcastLink of podcastLinks;index as i" [href]="podcastLink.link" target="_blank">
+        Listen on {{podcastLink.title}}
+        <span class="bg"></span>
+      </a>
     </div>
 
-    <div class="podcast-listing">
-      <div class="row" *ngIf="podcasts.length" [@fadeInGrow]>
-        <div class="col-md-4 col-lg-3" *ngFor="let podcast of podcasts;index as i">
-          <div class="card podcast-card" [routerLink]="['/podcast', i]">
-            <div class="image-holder">
-              <img [src]="podcast.imgUrl" alt="image">
-            </div>
 
-            <div>
-              <h4>{{podcast.title}}</h4>
-              <span class="time">{{podcast.time}}</span>
+    <div class="row">
+      <div class="col-md-12 col-lg-2 d-none d-lg-block"></div>
+      <div class="col-md-12 col-lg-7">
+
+        <div class="podcast-listing">
+          <div *ngIf="podcasts.length" [@fadeInGrow]>
+            <div class="card podcast-card" *ngFor="let podcast of podcasts;index as i">
+              <div class="image-holder" [routerLink]="['/podcast', i]">
+                <img [src]="podcast.imgUrl" alt="image">
+              </div>
+
+              <div class="podcast-content-container">
+                <div class="podcast-content">
+                  <h4 [routerLink]="['/podcast', i]" [ngClass]="{'active-play':currentPodcast?.index === i}">{{podcast.title}}</h4>
+                  <span class="time">{{podcast.time}}</span>
+                  <span class="time">{{podcast.date}}</span>
+                </div>
+
+
+                <div class="podcast-actions">
+                  <span class="podcast-play" [ngClass]="{'active-play':currentPodcast?.index === i}" (click)="play(i)"><i class="fa-solid fa-circle-play"></i></span>
+                  <!-- [hidden]="currentPodcast.index === i && currentPodcast.isPlaying" -->
+                  <!-- <span class="podcast-play" *ngIf="currentPodcast.index === i && currentPodcast.isPlaying" (click)="pause()"><i class="fa-solid fa-circle-pause"></i></span> -->
+                  <!-- <span class="custom-tooltip">{{currentPodcast.index === i && currentPodcast.isPlaying ? 'Pause' : 'Play'}} episode</span> -->
+                </div>
+              </div>
+
             </div>
-            <!-- <div [innerHTML]="podcast.iframe | sanitizeIframe">        </div> -->
           </div>
+        </div>
+
+      </div>
+      <div class="d-none d-lg-block col-lg-3">
+        <div class="floating-iframe-laptop d-none d-lg-block" *ngIf="currentPodcast" [@fadeIn]>
+          <div class="podcast-embed" [innerHTML]="currentPodcast.iframe | sanitizeIframe"> </div>
         </div>
       </div>
     </div>
 
   </div>
+</div>
+
+
+
+<div class="floating-iframe-mobile d-sm-block d-lg-none">
+  <div class="podcast-embed" [innerHTML]="currentPodcast.iframe | sanitizeIframe"> </div>
 </div>

@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/karla/Karla-normal-300.woff2) format('woff2'), url(../fonts/karla/Karla-normal-300.ttf) format('truetype'), url(../fonts/karla/Karla-normal-300) format('woff');
+}
+
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/karla/Karla-normal-400);
+  src: local('Karla'), url(../fonts/karla/Karla-normal-400.woff2) format('woff2'), url(../fonts/karla/Karla-normal-400.ttf) format('truetype'), url(../fonts/karla/Karla-normal-400.svg#Karla) format('svg'), url(../fonts/karla/Karla-normal-400?#iefix) format('embedded-opentype'), url(../fonts/karla/Karla-normal-400) format('woff');
+}
+
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/karla/Karla-normal-500.woff2) format('woff2'), url(../fonts/karla/Karla-normal-500.ttf) format('truetype'), url(../fonts/karla/Karla-normal-500) format('woff');
+}
