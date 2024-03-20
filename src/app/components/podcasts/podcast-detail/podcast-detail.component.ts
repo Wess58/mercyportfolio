@@ -33,7 +33,6 @@ export class PodcastDetailComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0, 0);
-
     this.getCurrentPodcast();
   }
 
@@ -74,7 +73,7 @@ export class PodcastDetailComponent implements OnInit {
 
   play(): void {
     if (document.querySelector('iframe[src*="spotify.com/embed"]')) {
-      const spotifyEmbedWindow:any = document.querySelector('iframe[src*="spotify.com/embed"]') as HTMLIFrameElement;
+      const spotifyEmbedWindow: any = document.querySelector('iframe[src*="spotify.com/embed"]') as HTMLIFrameElement;
       spotifyEmbedWindow.contentWindow.postMessage({ command: 'toggle' }, '*');
     }
   }

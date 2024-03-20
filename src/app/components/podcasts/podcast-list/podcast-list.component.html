@@ -57,18 +57,24 @@
         </div>
 
       </div>
-      <div class="d-none d-lg-block col-lg-3">
-        <div class="floating-iframe-laptop d-none d-lg-block" *ngIf="currentPodcast" [@fadeIn]>
+
+      <!-- <div class="floating-iframe-mobile d-sm-block d-lg-none">
+        <div class="podcast-embed" [innerHTML]="currentPodcast.iframe | sanitizeIframe"> </div>
+      </div> -->
+      <div class="col-12 col-lg-3">
+        <div class="floating-iframe-laptop" *ngIf="currentPodcast" [@fadeIn]>
+          <!-- d-none d-lg-block -->
           <div class="podcast-embed" [innerHTML]="currentPodcast.iframe | sanitizeIframe"> </div>
         </div>
       </div>
+
+
     </div>
 
+
+
   </div>
-</div>
 
 
 
-<div class="floating-iframe-mobile d-sm-block d-lg-none">
-  <div class="podcast-embed" [innerHTML]="currentPodcast.iframe | sanitizeIframe"> </div>
 </div>

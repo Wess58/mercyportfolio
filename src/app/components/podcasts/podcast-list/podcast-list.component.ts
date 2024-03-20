@@ -79,19 +79,20 @@ export class PodcastListComponent implements OnInit {
     this.currentPodcast.index = index;
     localStorage.setItem('pdcts',index);
 
-
     setTimeout(() => {
       this.currentPodcast.isPlaying = true;
       if (document.querySelector('iframe[src*="spotify.com/embed"]')) {
         const spotifyEmbedWindow: any = document.querySelector('iframe[src*="spotify.com/embed"]') as HTMLIFrameElement;
-        spotifyEmbedWindow.contentWindow.postMessage({ command: 'toggle' }, '*');
+        setTimeout(() => {
+          spotifyEmbedWindow.contentWindow.postMessage({ command: 'toggle' }, '*');
+        }, 1);
       }
-    }, 2000);
+    }, 1500);
   }
 
   pause():void{
     this.currentPodcast.isPlaying = false;
-    if (document.querySelector('iframe[src*="spotify.com/embed"]')) {
+      if (document.querySelector('iframe[src*="spotify.com/embed"]')) {
       const spotifyEmbedWindow: any = document.querySelector('iframe[src*="spotify.com/embed"]') as HTMLIFrameElement;
       spotifyEmbedWindow.contentWindow.postMessage({ command: 'toggle' }, '*');
     }
