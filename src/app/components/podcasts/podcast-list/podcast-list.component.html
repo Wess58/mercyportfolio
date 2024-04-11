@@ -7,8 +7,10 @@
   <div class="container">
 
 
-    <h3>The walk <br> Podcast</h3>
-    <div class="yellow-border"></div>
+    <div class="position-relative">
+      <h3>The walk <br> Podcast</h3>
+      <div class="yellow-border"></div>
+    </div>
 
     <p class="section-description"> 
       <span>
@@ -17,7 +19,7 @@
       </span>
     </p>
 
-    <div class="podcast-link-container" *ngIf="podcasts.length" [@fadeIn]>
+    <div class="podcast-link-container" *ngIf="podcasts?.length" [@fadeIn]>
       <a class="btn btn-podcast-link" *ngFor="let podcastLink of podcastLinks;index as i" [href]="podcastLink.link" target="_blank">
         Listen on {{podcastLink.title}}
         <span class="bg"></span>
@@ -25,22 +27,21 @@
     </div>
 
 
-    <div class="row">
-      <div class="col-md-12 col-lg-2 d-none d-lg-block"></div>
-      <div class="col-md-12 col-lg-7">
+    <div class="row justify-content-center">
+      <div class="col-lg-2 d-none d-lg-block"></div>
+      <div class="col-md-10 col-lg-7 px-md-0">
 
         <div class="podcast-listing">
-          <div *ngIf="podcasts.length" [@fadeInGrow]>
-            <div class="card podcast-card" *ngFor="let podcast of podcasts;index as i">
-              <div class="image-holder" [routerLink]="['/podcast', i]">
+          <div *ngIf="podcasts?.length && !loading" [@fadeInGrow]>
+            <div class="card podcast-card" [ngClass]="{'active-card':currentPodcast?.index === i}" *ngFor="let podcast of podcasts;index as i">
+              <div class="image-holder" [routerLink]="['/podcast', i]" (click)="storeToLocal(i)">
                 <img [src]="podcast.imgUrl" alt="image">
               </div>
 
               <div class="podcast-content-container">
                 <div class="podcast-content">
-                  <h4 [routerLink]="['/podcast', i]" [ngClass]="{'active-play':currentPodcast?.index === i}">{{podcast.title}}</h4>
-                  <span class="time">{{podcast.time}}</span>
-                  <span class="time">{{podcast.date}}</span>
+                  <h4 [routerLink]="['/podcast', i]" (click)="storeToLocal(i)">{{podcast.title}}</h4>
+                  <span class="time"> {{podcast.date}} <i class="fa-solid fa-circle"></i> {{podcast.time}}</span>
                 </div>
 
 
@@ -65,6 +66,35 @@
         <div class="floating-iframe-laptop" *ngIf="currentPodcast" [@fadeIn]>
           <!-- d-none d-lg-block -->
           <div class="podcast-embed" [innerHTML]="currentPodcast.iframe | sanitizeIframe"> </div>
+
+          <div class="share-content-box">
+
+            <span class="share-text">
+              <!-- I hope you enjoyed this podcast and learned something new.
+              <br>
+              If you did , share with your friends on social media. -->
+              Share podcast with your friends
+            </span>
+
+            <div class="social-links">
+              <a [href]="shareOnWhatsapp()" data-action="share/whatsapp/share" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span class="tool-tip">Whatsapp</span>
+              </a>
+              <a [href]="shareOnTwitter()" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+                <span class="tool-tip">&nbsp;Twitter&nbsp;</span>
+              </a>
+              <a [href]="shareOnFacebook()" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+                <span class="tool-tip">Facebook</span>
+              </a>
+              <a (click)="copyLink()">
+                <i class="fa-solid fa-link"></i>
+                <span class="tool-tip">{{isCopied ? ' Copied ! ' : 'Copy link'}}</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 

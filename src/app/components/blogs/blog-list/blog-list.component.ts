@@ -90,6 +90,8 @@ export class BlogListComponent implements OnInit {
 
           const emCollection = new DOMParser().parseFromString(blog.content, "text/html").documentElement.getElementsByTagName("figure");
           const imgSrc = new DOMParser().parseFromString(emCollection[0].innerHTML, "text/html").querySelectorAll('img')[0].src;
+          const introText = new DOMParser().parseFromString(blog.content, "text/html").documentElement.getElementsByTagName("p")[0].innerHTML;
+          blog.introText = introText.length > 200 ? introText.slice(0, 200) + '...' : introText;
           blog.thumbnail = imgSrc;
           blog.categories = this.concatCategoryStrings(blog.categories);
           blog.searchTerms = blog.title.toLowerCase() + ' ' + blog.categories.toLowerCase();

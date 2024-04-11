@@ -5,6 +5,7 @@
     background-color: #f8f9fa;
     // overflow-x: hidden;
     position: relative;
+    min-height: 600px;
 
     .content {
       padding: 3vh 0;
@@ -22,26 +23,32 @@
       }
 
       p {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        overflow: hidden;
+
       }
 
       .btn-cta {
         background-color: #f5be1d;
-        border: 1px solid #f5be1d;
+        border: none;
         border-radius: 0;
         font-style: 0.9rem;
         letter-spacing: 1px;
         color: #3c4043;
         font-weight: 600;
         padding: 10px 30px;
+        min-width: 170px;
         position: relative;
         overflow: hidden;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.2s ease-in-out;
         z-index: 1;
 
         &:hover {
           // background-color: #4673b6;
           // color: #f8f9fa;
+          padding-left: 40px;
+          transition: all 0.2s ease-in-out;
+
           .bg {
             // transform: translateY(100%);
             transform: translateX(0);
@@ -49,15 +56,13 @@
           }
         }
 
-
         .bg {
           left: 0;
           bottom: 0;
           transform: translateX(-100%);
-
-          color: #fff;
-          background: #4673b6;
-          border-radius: 0 30px 30px 0 ;
+          color: #f5be1d;
+          background: #3c4043;
+          border-radius: 0 30px 30px 0;
           width: 24px;
           height: 100%;
           position: absolute;
@@ -130,23 +135,33 @@
   #services {
     scroll-margin-top: 8vh!important;
     padding: 9vh 0;
-    background-color: #D1DCED;
+    min-height: 500px;
+    position: relative;
+    background: url("../../../assets/images/dots-bg.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #e1e1e1;
 
     .section-description {
       width: 80%;
       margin: 0 auto 8vh;
       color: #4673b6;
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       // font-weight: 400;
       span {
         display: block;
         margin-bottom: 20px;
+        backdrop-filter: blur(3px);
       }
     }
 
     .card {
       padding: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       border-radius: 8px;
       box-shadow: 7px 7px 0 0 #4673b655;
       border: 1px solid #f1f1f1;
@@ -176,22 +191,23 @@
       h4 {
         font-weight: 600;
         font-size: 1.05rem;
-        min-height: 40px;
+        min-height: 30px;
         // margin-bottom: 15px;
         color: #3c4043;
       }
 
       p {
-        font-size: 0.85rem;
+        font-size: 1rem;
         color: #5f6063;
+        line-height: 1.8rem;
         margin-bottom: 15px;
-        min-height: 190px;
+        min-height: 120px;
       }
 
       .link {
         cursor: pointer;
         color: #5f6063;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
 
         & span {
           transition: all 0.3s;
@@ -219,10 +235,20 @@
       justify-content: space-around;
 
       .company-img {
+        background-color: #fff;
+        width: 320px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        box-shadow: 0 0.7961918735236395px 2.3885756205709185px -0.625px #0000000d, 0 2.414506143104518px 7.2435184293135535px -1.25px #0000000d, 0 6.382653521484461px 19.147960564453385px -1.875px #0000000d, 0 20px 60px -2.5px #0000000d;
+        margin-bottom: 10px;
+
         img {
           width: auto;
-          height: 50px;
-          filter: drop-shadow(0 2px 3px #0002);
+          height: 55px;
+          // filter: drop-shadow(0 2px 3px #0002);
         }
       }
     }
@@ -239,42 +265,70 @@
       }
     }
   }
-
-
 }
 
 #articles {
+  background: url('../../../assets/images/circle-scatter-2.svg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
   .articles-listing {
     .article-card {
       border: none;
       padding: 10px 5px;
       cursor: pointer;
-      display: flex;
-      flex-direction: row;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      text-align: left;
+      backdrop-filter: blur(7px);
+      background-color: transparent;
 
-      &:last-child {
-        border-bottom: none;
-      }
 
       .article-image-holder {
         margin-right: 10px;
+        height: 255px;
+        width: 100%;
+        margin-bottom: 20px;
 
         img {
-          height: 100px;
-          width: 100px;
+          width: 100%;
+          height: 100%;
+          object-position: center;
           object-fit: cover;
-          border-radius: 6px;
+          image-rendering: -webkit-optimize-contrast;
+          image-rendering: crisp-edges;
+          // border-radius: 6px;
           border: 1px solid #e1e1e1;
         }
       }
 
       .podcast-title {
-        color: #5f6063;
-        font-size: 0.8rem;
-        font-weight: 600;
+        color: #3c4043;
+        font-size: 0.9rem;
+        font-weight: 500;
         display: block;
-        text-align: left;
+      }
+
+      .description{
+        font-weight: 300!important;
+        color: #5f6063;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+
+        ::ng-deep *{
+          font-weight: 300!important;
+        }
+      }
+
+      .time{
+        font-size: 0.8rem;
+        color: #80868b;
+        display: block;
+        font-weight: 300;
       }
     }
   }
@@ -337,7 +391,6 @@
       }
     }
   }
-
 }
 @media (max-width: 1000px) {
   main {
@@ -380,7 +433,7 @@
       padding: 3vh 0 7vh !important;
     }
 
-    .row{
+    .row {
       justify-content: center;
     }
 
@@ -399,8 +452,7 @@
         height: auto!important;
         z-index: 10;
         filter: drop-shadow(0 10px 5px #4673b660);
-        margin-left: 0!important;
-        margin: 0 auto;
+        margin: 0 auto!important;
       }
     }
 
@@ -415,8 +467,7 @@
   .company-images {
     .company-img {
       img {
-        height: 35px!important;
-        margin: 15px 20px;
+        height: 45px!important;
       }
     }
   }
@@ -439,6 +490,4 @@
       }
     }
   }
-
-
 }

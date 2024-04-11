@@ -1,8 +1,8 @@
 <div class="articles position-relative">
 
-  <img src="assets/images/yellow-articles-blob.svg" id="yellow-blob-articles" alt="">
+  <!-- <img src="assets/images/yellow-articles-blob.svg" id="yellow-blob-articles" alt=""> -->
 
-  <img src="assets/images/blue-articles-blob.svg" id="blue-blob-articles" alt="">
+  <!-- <img src="assets/images/blue-articles-blob.svg" id="blue-blob-articles" alt=""> -->
 
   <div class="container">
 
@@ -31,17 +31,19 @@
     </div>
 
 
-    <div class="podcasts-listing">
+    <div class="articles-listing">
       <div class="row" *ngIf="blogs.length" [@fadeInGrow]>
-        <div class="col-md-4 col-lg-3" *ngFor="let blog of blogs;index as i">
-          <div class="card podcast-card" (click)="toBlogDetail(blog)">
-            <div class="image-holder">
+        <div class="col-lg-6" *ngFor="let blog of blogs;index as i">
+          <div class="card article-card" (click)="toBlogDetail(blog)">
+            <div class="article-image-holder">
               <img [src]="blog.thumbnail" alt="image">
             </div>
 
             <div>
-              <h4>{{blog.title}}</h4>
-              <!-- <small class="blog-pubDate flex-fill"><span><i class="far fa-calendar-alt"></i></span> {{blog.pubDate }}</small> -->
+              <h4 class="podcast-title">{{blog.title}}</h4>
+              <div class="description" [innerHTML]="blog.introText"></div>
+              <small class="time"> {{blog.pubDate | date : 'MMM y' }}</small>
+
             </div>
           </div>
         </div>

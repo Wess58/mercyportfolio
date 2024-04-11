@@ -24,6 +24,7 @@ export class PodcastDetailComponent implements OnInit {
   currentPodcast: any;
   currentPodcastIndex = 0;
   isCopied = false;
+  otherPodcasts: any = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -33,18 +34,30 @@ export class PodcastDetailComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0, 0);
-    this.getCurrentPodcast();
+
+    this.podcasts.forEach((podcast: any, i: any) => {
+      podcast.index = i;
+    });
+
+    this.currentPodcastIndex = +this.activatedRoute.snapshot.params['index'] ?? 0;
+    this.getCurrentPodcast(this.currentPodcastIndex);
   }
 
-  getCurrentPodcast(): void {
-    setTimeout(() => {
-      this.currentPodcastIndex = this.activatedRoute.snapshot.params['index'] ?? 0;
-      this.currentPodcast = this.podcasts[this.currentPodcastIndex];
-    }, 1);
+  getCurrentPodcast(index: any): void {
+    this.router.navigate(['/podcast', index]);
+    this.currentPodcastIndex = +index;
 
     setTimeout(() => {
+
+      this.currentPodcast = this.podcasts[this.currentPodcastIndex];
+      const currentIndex = this.podcasts ?.length - this.currentPodcastIndex === 1 ? 0 : this.currentPodcastIndex + 1;
+
+      this.otherPodcasts = [];
+      this.otherPodcasts = this.podcasts.slice(currentIndex, currentIndex + 8);
+
       window.scroll(0, 0);
     }, 10);
+
   }
 
   shareOnWhatsapp(): any {
@@ -77,6 +90,7 @@ export class PodcastDetailComponent implements OnInit {
       spotifyEmbedWindow.contentWindow.postMessage({ command: 'toggle' }, '*');
     }
   }
+
 
 
 }

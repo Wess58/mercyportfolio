@@ -1,13 +1,24 @@
 .podcast-detail {
+
   .container {
     min-width: 80%;
   }
 
   .podcast-landing-section {
-    background-color: #D1DCED;
+    // background-color: #D1DCED;
     min-height: 500px;
     position: relative;
-    padding-top: 10vh;
+    padding: 5vh 0;
+    background: url('../../../../assets/images/blurry-gradient-2.svg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    // background-attachment: fixed;
+    background-position: top;
+
+
 
     .podcast-image-holder {
       text-align: center;
@@ -15,7 +26,8 @@
 
       img {
         width: 100%;
-        border: 1px solid #f1f1f1;
+        border: 1px solid #e1e1e1;
+        border-radius: 20px;
       }
     }
 
@@ -41,6 +53,21 @@
         font-size: 2.5rem;
         font-weight: 900;
         line-height: 4rem;
+      }
+
+      .time{
+        font-size: 0.9rem;
+        color: #5f6063;
+        display: block;
+        font-weight: 500;
+        margin-left: 3px;
+
+        i{
+          font-size: 0.3rem;
+          position: relative;
+          top:-3px;
+          margin: 0 5px;
+        }
       }
     }
 
@@ -201,8 +228,8 @@
       }
 
       .podcast-item {
-        border-bottom: 2px solid #f5be1d;
-        padding: 10px 5px;
+        border-bottom: 2px solid #f5be1d55;
+        padding: 20px 5px;
         cursor: pointer;
         display: flex;
 
@@ -237,10 +264,18 @@
           display: block;
         }
 
-        .time {
-          font-size: 0.8rem;
-          color: #5f6063;
+        .time{
+          font-size: 0.75rem;
+          color: #80868b;
           display: block;
+          font-weight: 300;
+
+          i{
+            font-size: 0.2rem;
+            position: relative;
+            top:-2px;
+            margin: 0 5px;
+          }
         }
       }
     }
@@ -276,6 +311,7 @@
     .episode-title {
       font-size: 2rem!important;
       line-height: 3rem!important;
+      margin-bottom: 20px!important;
     }
   }
 
@@ -304,8 +340,6 @@
 
     .episode-title {
       font-size: 1.5rem!important;
-      line-height: 2rem!important;
-      margin-bottom: 20px;
     }
   }
 

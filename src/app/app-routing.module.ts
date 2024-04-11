@@ -23,7 +23,7 @@ const routes: Routes = [
     {
       useHash: true,
       anchorScrolling: 'enabled',
-      // scrollPositionRestoration: "enabled"
+      scrollPositionRestoration: "enabled"
     })],
   exports: [RouterModule]
 })

@@ -2,11 +2,12 @@
   <div class="podcast-landing-section">
     <div class="container">
 
-      <button class="btn btn-back" [routerLink]="'/podcasts'"><i class="fa-solid fa-arrow-left"></i></button>
 
 
       <div class="row justify-content-center">
         <div class="col-md-12 col-lg-9">
+          <button class="btn btn-back" [routerLink]="'/podcasts'"><i class="fa-solid fa-arrow-left"></i></button>
+
           <div class="row align-items-center">
             <div class="col-md-5">
               <div class="podcast-image-holder">
@@ -17,6 +18,8 @@
               <div class="content">
                 <span class="podcast-name">The walk by Mercy Munyange Podcast</span>
                 <span class="episode-title">{{currentPodcast.title}}</span>
+                <span class="time"> {{currentPodcast.date}} <i class="fa-solid fa-circle"></i> {{currentPodcast.time}}</span>
+
               </div>
             </div>
           </div>
@@ -27,7 +30,7 @@
     </div>
 
     <div class="bottom-wave">
-      <img src="assets/images/light-blue-wave.svg" alt="">
+      <!-- <img src="assets/images/light-blue-wave.svg" alt=""> -->
     </div>
   </div>
 
@@ -53,8 +56,8 @@
             <h5>Share on social?</h5>
 
             <span class="share-instructions">Hey, thank you so much for listening to this episode of my podcast. I hope you enjoyed it and learned something new. If you did, I have a small favor to ask you. <br><br> Please share this podcast with
-              your friends
-              on social media. It would mean the world to me and it would help me reach more people who might benefit from my content. Sharing is easy, just click on your preffered social channel, and tag me <strong>@mukami.mercy</strong>.
+              your friends on social media. It would mean the world to me and it would help me reach more people who might benefit from my content. Sharing is easy, just click on your preffered social channel, and tag me
+              <strong>@mukami.mercy</strong>.
             </span>
 
             <div class="social-links">
@@ -89,15 +92,15 @@
         </div>
         <div class="col-md-4 col-lg-3">
           <div class="podcasts-listing">
-            <h4>OTHER PODCASTS</h4>
+            <h4>NEXT PODCASTS</h4>
 
-            <div class="podcast-item" *ngFor="let podcast of podcasts.slice(0,7);index as i" [hidden]="i === +currentPodcastIndex" [routerLink]="['/podcast', i]" (click)="getCurrentPodcast()">
+            <div class="podcast-item" *ngFor="let podcast of otherPodcasts;" (click)="getCurrentPodcast(podcast.index)">
               <div class="image-holder">
                 <img [src]="podcast.imgUrl" alt="image">
               </div>
               <div>
                 <span class="podcast-title">{{podcast.title}}</span>
-                <span class="time">{{podcast.time}}</span>
+                <span class="time"> {{podcast.date}} <i class="fa-solid fa-circle"></i> {{podcast.time}}</span>
               </div>
             </div>
           </div>
