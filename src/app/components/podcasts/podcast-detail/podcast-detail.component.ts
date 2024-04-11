@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 import { style, animate, transition, trigger } from '@angular/animations';
@@ -25,6 +25,8 @@ export class PodcastDetailComponent implements OnInit {
   currentPodcastIndex = 0;
   isCopied = false;
   otherPodcasts: any = [];
+  animateAfterViewInit = false;
+
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -41,6 +43,12 @@ export class PodcastDetailComponent implements OnInit {
 
     this.currentPodcastIndex = +this.activatedRoute.snapshot.params['index'] ?? 0;
     this.getCurrentPodcast(this.currentPodcastIndex);
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.animateAfterViewInit = true;
+    }, 200);
   }
 
   getCurrentPodcast(index: any): void {

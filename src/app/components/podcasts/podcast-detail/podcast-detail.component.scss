@@ -361,6 +361,10 @@
   }
 
   .podcasts-listing {
+    position: relative!important;
+    top:0!important;
+    padding-top: 5vh!important;
+
     .podcast-item {
       .image-holder {
         height: 70px!important;

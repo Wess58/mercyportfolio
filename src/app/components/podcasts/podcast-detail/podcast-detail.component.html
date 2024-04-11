@@ -11,12 +11,12 @@
           <div class="row align-items-center">
             <div class="col-md-5">
               <div class="podcast-image-holder">
-                <img [src]="currentPodcast.imgUrl" alt="image">
+                <img [ngClass]="{'drop-in':animateAfterViewInit}" [hidden]="!animateAfterViewInit" [src]="currentPodcast.imgUrl" alt="image">
               </div>
             </div>
             <div class="col-md-7">
-              <div class="content">
-                <span class="podcast-name">The walk by Mercy Munyange Podcast</span>
+              <div class="content" [ngClass]="{'drop-in-2':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
+                <span class="podcast-name" >The walk by Mercy Munyange Podcast</span>
                 <span class="episode-title">{{currentPodcast.title}}</span>
                 <span class="time"> {{currentPodcast.date}} <i class="fa-solid fa-circle"></i> {{currentPodcast.time}}</span>
 
@@ -35,7 +35,7 @@
   </div>
 
 
-  <div class="podcast-content">
+  <div class="podcast-content" [ngClass]="{'drop-in-3':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
 
     <div class="container">
       <div class="row justify-content-center">
