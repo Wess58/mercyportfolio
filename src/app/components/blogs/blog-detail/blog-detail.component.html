@@ -55,8 +55,10 @@
               <img [src]="blog.thumbnail" alt="image">
             </div>
 
-            <div class="podcast-title">
-              <span>{{blog.title}}</span>
+            <div>
+              <span class="podcast-title" >{{blog.title}}</span>
+              <small class="time"> {{blog.pubDate | date : 'MMM y' }}</small>
+
             </div>
           </div>
         </div>
