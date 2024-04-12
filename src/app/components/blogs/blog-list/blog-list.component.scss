@@ -33,6 +33,7 @@
   }
 
   .articles-listing {
+    backdrop-filter: blur(7px);
     .article-card {
       border: none;
       padding: 10px 5px;
