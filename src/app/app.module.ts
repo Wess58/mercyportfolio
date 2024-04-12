@@ -44,7 +44,11 @@ import { BookComponent } from './components/book/book.component';
   providers: [
     {
       provide: LocationStrategy,
-      useClass: PathLocationStrategy
+      // PROD
+      // useClass: PathLocationStrategy,
+      // TEST
+      useClass: HashLocationStrategy
+
     }
   ],
   bootstrap: [AppComponent]
