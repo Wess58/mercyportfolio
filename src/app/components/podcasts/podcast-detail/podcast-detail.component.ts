@@ -43,6 +43,8 @@ export class PodcastDetailComponent implements OnInit {
 
     this.currentPodcastIndex = +this.activatedRoute.snapshot.params['index'] ?? 0;
     this.getCurrentPodcast(this.currentPodcastIndex);
+
+
   }
 
   ngAfterViewInit(): void {
@@ -98,6 +100,7 @@ export class PodcastDetailComponent implements OnInit {
       spotifyEmbedWindow.contentWindow.postMessage({ command: 'toggle' }, '*');
     }
   }
+
 
 
 

@@ -8,7 +8,7 @@
 
 
     <div class="position-relative">
-      <h3>The walk <br> Podcast</h3>
+      <h3>The walk By Mercy Munyange <br> Podcast</h3>
       <div class="yellow-border"></div>
     </div>
 
@@ -35,7 +35,7 @@
           <div *ngIf="podcasts?.length && !loading" [@fadeInGrow]>
             <div class="card podcast-card" [ngClass]="{'active-card':currentPodcast?.index === i}" *ngFor="let podcast of podcasts;index as i">
               <div class="image-holder" [routerLink]="['/podcast', i]" (click)="storeToLocal(i)">
-                <img [src]="podcast.imgUrl" alt="image">
+                <img [src]="podcast.imgUrl" loading="lazy" alt="image">
               </div>
 
               <div class="podcast-content-container">

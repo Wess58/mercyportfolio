@@ -15,10 +15,9 @@
           </div>
         </div>
         <div class="col-9 col-md-6">
-          <div class="illustration" [ngClass]="{'drop-in':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
-            <span [ngClass]="{'drop-in-2':animateAfterViewInit}" [hidden]="!animateAfterViewInit" class="italic-name">Mercy Munyange</span>
+          <div class="illustration" [ngClass]="{'drop-in-2':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
+            <span [ngClass]="{'drop-in-3':animateAfterViewInit}" [hidden]="!animateAfterViewInit" class="italic-name">Mercy Munyange</span>
             <img class="mercy-img" [src]="content.imgUrl" alt="illustration">
-            <!-- <img src="assets/images/blue-blob.svg" id="blue-blob" alt="illustration"> -->
           </div>
         </div>
       </div>
@@ -59,12 +58,21 @@
   <!-- TRUSTED COMPANIES -->
   <div id="companies">
     <div class="container">
-      <p class="section-description">{{companies.description}}</p>
-      <div class="company-images">
-        <div class="company-img" *ngFor="let imgUrl of companies.companyImgs;index as i">
-          <img [src]="imgUrl" alt="company">
-        </div>
+      <div class="companies-gradient-bg">
       </div>
+
+      <p class="section-description">{{companies.description}}</p>
+
+      <div class="company-images">
+        <div class="slide-track">
+
+          <div class="company-img" *ngFor="let imgUrl of companies.companyImgs;index as i">
+            <img [src]="imgUrl" alt="company">
+          </div>
+        </div>
+
+      </div>
+
     </div>
 
     <div class="bottom-wave">
@@ -77,7 +85,7 @@
   <!-- PODCAST SECTION -->
   <div id="podcasts" class="podcasts">
     <div class="container">
-      <h3>The walk <br> Podcast</h3>
+      <h3>The Walk By Mercy Munyange<br> Podcast</h3>
       <div class="yellow-border"></div>
 
       <p class="section-description"> 
@@ -91,7 +99,7 @@
         <div class="col-md-4 col-lg-3" *ngFor="let podcast of podcasts.slice(0,4);index as i">
           <div class="card podcast-card" [routerLink]="['/podcast', i]">
             <div class="image-holder">
-              <img [src]="podcast.imgUrl" alt="">
+              <img [src]="podcast.imgUrl" loading="lazy" alt="">
             </div>
 
             <div>
@@ -115,66 +123,68 @@
 
   <!-- PODCAST SECTION -->
   <div id="articles" class="articles">
-    <div class="container">
-      <h3>Articles</h3>
-      <div class="yellow-border"></div>
+    <div class="articles-blurred-bg">
+      <div class="container">
+        <h3>Articles</h3>
+        <div class="yellow-border"></div>
 
-      <p class="section-description"> 
-        <span>
-          Feeling stuck or frustrated with your business? Do you wish to break free from the limitations and challenges that are holding your life back? Then check out my articles that will inspire and transform you with practical tips! </span>
-      </p>
+        <p class="section-description"> 
+          <span>
+            Feeling stuck or frustrated with your business? Do you wish to break free from the limitations and challenges that are holding your life back? Then check out my articles that will inspire and transform you with practical tips! </span>
+        </p>
 
-      <div class="row">
-        <!-- <div class="col-md-5">
+        <div class="row">
+          <!-- <div class="col-md-5">
           <div class="illustration-holder">
             <img src="assets/images/undraw-articles.svg" alt="illustration">
           </div>
         </div> -->
 
-        <div class="col-md-12">
-          <div class="articles-listing d-none d-md-block">
-            <div class="row" *ngIf="blogs.length" [@fadeInGrow]>
-              <div class="col-md-6" *ngFor="let blog of blogs.slice(0,4);index as i">
-                <div class="card article-card" (click)="toBlogDetail(blog)">
-                  <div class="article-image-holder">
-                    <img [src]="blog.thumbnail" alt="image">
+          <div class="col-md-12">
+            <div class="articles-listing d-none d-md-block">
+              <div class="row" *ngIf="blogs.length" [@fadeInGrow]>
+                <div class="col-md-6" *ngFor="let blog of blogs.slice(0,4);index as i">
+                  <div class="card article-card" (click)="toBlogDetail(blog)">
+                    <div class="article-image-holder">
+                      <img [src]="blog.thumbnail" loading="lazy" alt="image">
+                    </div>
+
+                    <div>
+                      <h4 class="podcast-title">{{blog.title}}</h4>
+                      <div class="description" [innerHTML]="blog.introText"></div>
+                      <small class="time"> {{blog.pubDate | date : 'MMM y' }}</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="d-block d-md-none">
+            <div class="row mx-0 mt-5" *ngIf="blogs.length" [@fadeInGrow]>
+              <div class="col-12 col-md-4" *ngFor="let blog of blogs.slice(0,4);index as i">
+                <div class="card podcast-card" (click)="toBlogDetail(blog)">
+                  <div class="image-holder">
+                    <img [src]="blog.thumbnail" loading="lazy" alt="image">
                   </div>
 
                   <div>
-                    <h4 class="podcast-title">{{blog.title}}</h4>
-                    <div class="description" [innerHTML]="blog.introText"></div>
-                    <small class="time"> {{blog.pubDate | date : 'MMM y' }}</small>
+                    <h4>{{blog.title}}</h4>
+                    <small class="time text-left"> {{blog.pubDate | date : 'MMM y' }}</small>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
 
 
-
-        <div class="d-block d-md-none">
-          <div class="row mx-0 mt-5" *ngIf="blogs.length" [@fadeInGrow]>
-            <div class="col-12 col-md-4" *ngFor="let blog of blogs.slice(0,4);index as i">
-              <div class="card podcast-card" (click)="toBlogDetail(blog)">
-                <div class="image-holder">
-                  <img [src]="blog.thumbnail" alt="image">
-                </div>
-
-                <div>
-                  <h4>{{blog.title}}</h4>
-                  <small class="time text-left"> {{blog.pubDate | date : 'MMM y' }}</small>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="text-center" *ngIf="blogs.length > 4">
+          <button class="btn btn-more-podcasts" [routerLink]="'/articles'">More articles <i class="fa-solid fa-arrow-right-long"></i></button>
         </div>
-
-      </div>
-
-
-      <div class="text-center" *ngIf="blogs.length > 4">
-        <button class="btn btn-more-podcasts" [routerLink]="'/articles'">More articles <i class="fa-solid fa-arrow-right-long"></i></button>
       </div>
     </div>
   </div>

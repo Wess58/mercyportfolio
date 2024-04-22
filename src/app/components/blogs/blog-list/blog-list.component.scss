@@ -1,5 +1,5 @@
 .articles {
-  padding-top: 7vh;
+  // padding-top: 7vh;
   // background-color: #FBE7AA;
   overflow-x: hidden;
   background: url('../../../../assets/images/circle-scatter-2.svg');
@@ -10,6 +10,7 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  padding: 0!important;
 
 
   #yellow-blob-articles {

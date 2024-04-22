@@ -11,7 +11,6 @@
 // color yellow - #f5be1d
 // ng build --base-href https://wess58.github.io/mercyportfolio/ --output-path docs && git add . && git commit -m "docs ready for deployment" && git push
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -46,7 +45,7 @@ button {
   box-shadow: none!important;
 }
 
-* strong{
+* strong {
   font-weight: 600;
 }
 
@@ -67,7 +66,7 @@ button {
   text-align: center;
 }
 
-.btn-back{
+.btn-back {
   background-color: transparent;
   color: #3c4043;
   padding: 5px 10px;
@@ -75,31 +74,30 @@ button {
   border: 1px solid #e1e1e1;
   font-size: 1.1rem;
   margin-bottom: 20px;
-  transition: all .3s;
+  transition: all 0.3s;
 
-  &:hover{
+  &:hover {
     border: 1px solid #3c4043;
     background-color: #3c4043;
     color: #fff;
   }
 }
-
 // *****************************
 // PODCASTS SECTION
 // *****************************
 
-.podcasts,.articles {
+.articles,
+.podcasts {
   padding: 7vh 0;
   overflow-x: hidden;
 
   h3 {
     font-weight: 600;
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: center;
     color: #4673b6;
     z-index: 10!important;
     position: relative;
-
   }
 
   .yellow-border {
@@ -114,7 +112,7 @@ button {
 
   .section-description {
     width: 70%;
-    margin: 5vh auto 5vh;
+    margin: 5vh auto;
     font-size: 0.95rem;
     // font-weight: 400;
     span {
@@ -153,16 +151,16 @@ button {
       text-align: left;
     }
 
-    .time{
+    .time {
       font-size: 0.8rem;
       color: #80868b;
       display: block;
       font-weight: 300;
 
-      i{
+      i {
         font-size: 0.2rem;
         position: relative;
-        top:-2px;
+        top: -2px;
         margin: 0 5px;
       }
     }
@@ -192,19 +190,24 @@ button {
     }
   }
 }
-
 // ***************************
 // ARTICLES GENERAL STYLING
 // ***************************
-.articles{
+
+.articles {
   text-align: center;
   background-color: #fff;
-  padding-top: 10vh;
-  padding-bottom: 7vh;
+  padding: 0!important !important;
 
-  h3{
+  .articles-blurred-bg {
+    backdrop-filter: blur(20px);
+    padding-top: 10vh;
+    padding-bottom: 7vh;
+  }
+
+  h3 {
     z-index: 10!important;
-    position:relative;
+    position: relative;
   }
 
   .yellow-border {
@@ -217,12 +220,11 @@ button {
     z-index: 0!important;
   }
 
-  .illustration-holder{
-    img{
+  .illustration-holder {
+    img {
       transform: scaleX(-1);
       width: 80%;
       filter: drop-shadow(0 20px 5px #0002);
-
     }
   }
 
@@ -234,39 +236,36 @@ button {
       object-fit: cover;
     }
   }
-
 }
-
-
-
 // *******************************
 // DROP-IN TEXT ANIMATION
 // *******************************
 
 .drop-in {
- animation: drop-in 1s ease 200ms backwards;
+  animation: drop-in 1s ease 200ms backwards;
 }
 
 .drop-in-2 {
- animation: drop-in 1200ms ease 500ms backwards;
+  animation: drop-in 1200ms ease 500ms backwards;
 }
 
 .drop-in-3 {
- animation: drop-in 1500ms ease 700ms backwards;
+  animation: drop-in 1500ms ease 700ms backwards;
+}
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
 }
 
-@keyframes drop-in {
- from {
-  opacity: 0;
-  transform: translateY(70px);
- }
- to {
-  opacity: 1;
-  transform: translate(0px);
- }
-}
 @media (max-width: 1000px) {
-  .podcasts,.articles {
+  .podcasts {
     padding: 5vh 0 !important;
   }
 
@@ -281,11 +280,11 @@ button {
     text-align: center;
     font-size: 0.85rem!important;
     line-height: 1.4rem;
-      min-width: 100%;
+    min-width: 100%;
   }
 
-  .podcasts,.articles {
-
+  .articles,
+  .podcasts {
     .col-lg-3,
     .col-md-4 {
       &:last-child {
@@ -308,7 +307,6 @@ button {
       background-color: #fff;
       box-shadow: 0 0.7961918735236395px 2.3885756205709185px -0.625px #4673b640, 0 2.414506143104518px 7.2435184293135535px -1.25px #0000000d, 0 6.382653521484461px 19.147960564453385px -1.875px #0000000d, 0 20px 60px -2.5px #0000000d;
       // box-shadow: 0 20px 30px 0 #0001;
-
       border-radius: 12px;
       // align-items: center!important;
       padding: 16px;
@@ -339,7 +337,6 @@ button {
         color: #3c4043;
         text-align: left;
       }
-
     }
   }
 }
