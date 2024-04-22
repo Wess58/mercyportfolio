@@ -16,7 +16,7 @@
             </div>
             <div class="col-md-7">
               <div class="content" [ngClass]="{'drop-in-2':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
-                <span class="podcast-name" >The walk by Mercy Munyange Podcast</span>
+                <span class="podcast-name">The walk by Mercy Munyange Podcast</span>
                 <span class="episode-title">{{currentPodcast.title}}</span>
                 <span class="time"> {{currentPodcast.date}} <i class="fa-solid fa-circle"></i> {{currentPodcast.time}}</span>
 
@@ -50,7 +50,8 @@
 
           <div class="podcast-description" [innerHTML]="currentPodcast.description"></div>
 
-          <a class="support-link" href="https://www.buzzsprout.com/2197946/support" target="_blank">Support the show <i class="fa-solid fa-square-arrow-up-right"></i></a>
+          <div class="podcast-description">Support the show</div>
+          <!-- <a class="support-link" href="https://www.buzzsprout.com/2197946/support" target="_blank">Support the show <i class="fa-solid fa-square-arrow-up-right"></i></a> -->
 
           <div class="share-on-socials">
             <h5>Share on social?</h5>
