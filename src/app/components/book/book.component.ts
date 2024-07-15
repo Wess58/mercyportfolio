@@ -9,7 +9,8 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browse
 })
 export class BookComponent implements OnInit {
 
-  whatsappBookPurchaseMessage = 'Hello, I am interested in buying your book. I saw your website and got redirected to this WhatsApp chat. Your book sounds amazing and I\'m excited to read it. Can you please tell me how to proceed with the purchase? Thank you.';
+  whatsappBookPurchaseMessage = 'Hello, I am interested in buying your book. I saw your website and got redirected to this WhatsApp chat. Your book (Kingdom Encounter Workbook) sounds amazing and I\'m excited to read it. Can you please tell me how to proceed with the purchase? Thank you.';
+  whatsappDevotionalBookPurchaseMessage = 'Hello, I am interested in buying your book. I saw your website and got redirected to this WhatsApp chat. Your book (30 DAY DEVOTIONAL FOR THE WORKING WOMAN) sounds amazing and I\'m excited to read it. Can you please tell me how to proceed with the purchase? Thank you.';
 
 
   constructor(
@@ -19,8 +20,8 @@ export class BookComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  shareOnWhatsapp(): any {
-    const whatsappLink = this.sanitizer.bypassSecurityTrustUrl('https://wa.me/254723547630?text=' + this.whatsappBookPurchaseMessage);
+  shareOnWhatsapp(bookType:string): any {
+    const whatsappLink = this.sanitizer.bypassSecurityTrustUrl('https://wa.me/254723547630?text=' + (bookType === 'devotional' ? this.whatsappDevotionalBookPurchaseMessage : this.whatsappBookPurchaseMessage));
     return whatsappLink;
   }
 
