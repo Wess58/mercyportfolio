@@ -24,7 +24,7 @@
                 <span class="tool-tip">Whatsapp</span>
               </a>
               <a [href]="shareOnTwitter()" target="_blank">
-                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-x-twitter"></i>
                 <span class="tool-tip">&nbsp;Twitter&nbsp;</span>
               </a>
               <a [href]="shareOnFacebook()" target="_blank">
@@ -55,8 +55,10 @@
               <img [src]="blog.thumbnail" alt="image">
             </div>
 
-            <div class="podcast-title">
-              <span>{{blog.title}}</span>
+            <div>
+              <span class="podcast-title" >{{blog.title}}</span>
+              <small class="time"> {{blog.pubDate | date : 'MMM y' }}</small>
+
             </div>
           </div>
         </div>

@@ -4,33 +4,39 @@
       <div class="row align-items-center">
         <div class="col-12 col-lg-7 position-relative">
           <div class="content">
-            <h1><span>About </span> Mercy Munyange</h1>
+            <h1 [ngClass]="{'drop-in':animateAfterViewInit}" [hidden]="!animateAfterViewInit"><span>About </span> Mercy Munyange</h1>
 
-            <p>
-              I'm a passionate <strong>business and product development expert</strong> who loves to create value for businesses and their customers. I have over <strong>twelve years of experience</strong> in various sectors, such as digital
-              financial
-              services, digital solutions, data analytics and customer experience with impactful work in different markets, including Kenya, Tanzania, Nigeria and the Caribbean, USA.
-            </p>
+            <div [ngClass]="{'drop-in-3':animateAfterViewInit}" [hidden]="!animateAfterViewInit">
 
-            <p>
-              I have been part of some amazing projects that <strong>have made a difference in the world</strong>. For instance, I was part of the initial team that launched M-PESA, the world's renowned mobile money service, in Kenya. I was
-              responsible for running the end-to-end agency management process, from recruitment and vetting to training and activation of agents and learned a lot about the importance of customer feedback and relationship management in growing a successful business.
-            </p>
+              <p>
+                I'm a passionate <strong>business and product development expert</strong> who loves to create value for businesses and their customers. I have over <strong>twelve years of experience</strong> in various sectors, such as digital
+                financial
+                services, digital solutions, data analytics and customer experience with impactful work in different markets, including Kenya, Tanzania, Nigeria and the Caribbean, USA.
+              </p>
 
-            <p>
-              I learned a lot about the importance of customer feedback and relationship management in growing a successful business. I also led a team within Safaricom PLC, the largest telecom company in Kenya, to set up a customer value management unit that used data to strategically target consumers with relevant products. I enjoy
-              working with data and analytics to <strong>understand customer behavior and preferences</strong>.
-            </p>
+              <p>
+                I have been part of some amazing projects that <strong>have made a difference in the world</strong>. For instance, I was part of the initial team that launched M-PESA, the world's renowned mobile money service, in Kenya. I was
+                responsible for running the end-to-end agency management process, from recruitment and vetting to training and activation of agents and learned a lot about the importance of customer feedback and relationship management in growing a
+                successful business.
+              </p>
 
-            <p>Besides my professional work, I also love to share my insights and experiences with others through my podcasts and in writing. <strong>I am an author</strong> of a book titled <a href="#book">Kingdom Encounter</a>. This book is a
-              reflection of my personal journey with God and how He has transformed my life.
-            </p>
+              <p>
+                I learned a lot about the importance of customer feedback and relationship management in growing a successful business. I also led a team within Safaricom PLC, the largest telecom company in Kenya, to set up a customer value
+                management unit that used data to strategically target consumers with relevant products. I enjoy
+                working with data and analytics to <strong>understand customer behavior and preferences</strong>.
+              </p>
+
+              <p>Besides my professional work, I also love to share my insights and experiences with others through my podcasts and in writing. <strong>I am an author</strong> of a book titled <a href="#book">Kingdom Encounter</a>. This book is a
+                reflection of my personal journey with God and how He has transformed my life.
+              </p>
+            </div>
+
 
           </div>
         </div>
         <div class="col-9 col-lg-5">
           <div class="illustration">
-            <img class="mercy-img" src="assets/images/mercy-about-image.jpg" alt="illustration">
+            <img class="mercy-img" [ngClass]="{'drop-in-2':animateAfterViewInit}" [hidden]="!animateAfterViewInit" src="assets/images/mercy-about-image.jpg" alt="illustration">
           </div>
         </div>
       </div>
@@ -50,13 +56,15 @@
 
           <div class="content">
             <p>
-              Currently, I am offering strategy advice as a business consultant to various organizations, such as Taxiye, Meliora Technologies, Stanbic Bank and Telkom ; by helping them develop efficient, operationally and commercially sound strategic
+              Currently, I am offering strategy advice as a business consultant to various organizations, such as Taxiye, Meliora Technologies, Stanbic Bank and Telkom ; by helping them develop efficient, operationally and commercially sound
+              strategic
               plans, as well as implement customer feedback management systems and gain a 360-degree <strong>understanding of customer behavior</strong>.
             </p>
 
             <p>
-              My core strengths include strategy formulation, customer journey mapping, business process development, operations and support development, SME scale through operationalization and management. I have <strong>a Bachelor's Degree in Social Work
-              and a Master's Degree in Project Planning and Management</strong> from the University of Nairobi.
+              My core strengths include strategy formulation, customer journey mapping, business process development, operations and support development, SME scale through operationalization and management. I have <strong>a Bachelor's Degree in
+                Social Work
+                and a Master's Degree in Project Planning and Management</strong> from the University of Nairobi.
 
             </p>
 

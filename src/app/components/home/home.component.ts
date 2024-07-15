@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { style, state, animate, transition, trigger, query, stagger } from '@angular/animations';
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
   services: any = content.services;
   podcasts: any = podcasts.podcasts;
   blogs: any = [];
-
+  animateAfterViewInit = false;
 
   constructor(
     private sanitizer: DomSanitizer,
@@ -57,21 +57,27 @@ export class HomeComponent implements OnInit {
 
   }
 
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.animateAfterViewInit = true;
+    }, 200);
+  }
+
   getAllPosts(): void {
     this.mediumService.getPosts().subscribe(
       (res: any) => {
-
         this.blogs = res.items;
         this.blogs.forEach((blog: any) => {
           const emCollection = new DOMParser().parseFromString(blog.content, "text/html").documentElement.getElementsByTagName("figure");
-          const imgSrc = new DOMParser().parseFromString(emCollection[0].innerHTML, "text/html").querySelectorAll('img')[0].src;
-          blog.thumbnail = imgSrc;
+        const imgSrc = new DOMParser().parseFromString(emCollection[0]?.innerHTML, "text/html").querySelectorAll('img')[0]?.src;
+          const introText = new DOMParser().parseFromString(blog.content, "text/html")?.documentElement.getElementsByTagName("p")[0]?.innerHTML;
+          blog.introText = introText.length > 200 ? introText.slice(0, 200) + '...' : introText;
+          blog.thumbnail = imgSrc ?? 'assets/images/podcast-imgs/seo-img-the-walk-by-mercy.jpg';
           blog.categories = this.concatCategoryStrings(blog.categories);
           blog.searchTerms = blog.title.toLowerCase() + ' ' + blog.categories.toLowerCase();
           const splitGuid = blog.guid.split('/');
           blog.localGuid = splitGuid[splitGuid.length - 1];
-          // blog.pubDate = moment(blog.pubDate).format('LL');
-          // console.log(this.blogs);
+          blog.pubDate = new Date(blog.pubDate);
           // console.log(moment(blog.pubDate).format('LL'));
         });
         // this.blogs = Array(5).fill(res.items[0]);
@@ -102,10 +108,10 @@ export class HomeComponent implements OnInit {
     return str.toLowerCase();
   }
 
-  redirect(link:any):void{
+  redirect(link: any): void {
     if (link.includes('https')) {
       window.open(link, "_blank");
-    }else{
+    } else {
       this.router.navigate([link]);
     }
   }

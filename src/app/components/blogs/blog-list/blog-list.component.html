@@ -1,9 +1,10 @@
 <div class="articles position-relative">
 
-  <img src="assets/images/yellow-articles-blob.svg" id="yellow-blob-articles" alt="">
+  <!-- <img src="assets/images/yellow-articles-blob.svg" id="yellow-blob-articles" alt=""> -->
 
-  <img src="assets/images/blue-articles-blob.svg" id="blue-blob-articles" alt="">
+  <!-- <img src="assets/images/blue-articles-blob.svg" id="blue-blob-articles" alt=""> -->
 
+<div class="articles-blurred-bg">
   <div class="container">
 
     <h3>Articles</h3>
@@ -12,41 +13,44 @@
     <p class="section-description"> 
       <span>
         Feeling stuck or frustrated with your business? Do you wish to break free from the limitations and challenges that are holding your life back? Then check out my articles that will inspire and transform you with practical tips! </span>
-    </p>
+      </p>
 
 
-    <div class="filter-section" hidden>
-      <div class="row justify-content-right">
-        <div class="col-md-12">
-          <div class="filters">
-            <!-- <span (click)="sortBlogs()"><i class="fas sort-icon" [ngClass]="{'fa-sort-amount-up':!descending,'fa-sort-amount-down-alt':descending}"></i></span> -->
+      <div class="filter-section" hidden>
+        <div class="row justify-content-right">
+          <div class="col-md-12">
+            <div class="filters">
+              <!-- <span (click)="sortBlogs()"><i class="fas sort-icon" [ngClass]="{'fa-sort-amount-up':!descending,'fa-sort-amount-down-alt':descending}"></i></span> -->
 
-            <input type="text" name="search-blog" id="search-blog" [(ngModel)]="searchBlog" placeholder="Search blog" (keyup)="searchBlogByTitle(searchBlog)">
-            <span *ngIf="!searchBlog" [@fadeIn]><i class="fas fa-search search-icon"></i></span>
+              <input type="text" name="search-blog" id="search-blog" [(ngModel)]="searchBlog" placeholder="Search blog" (keyup)="searchBlogByTitle(searchBlog)">
+              <span *ngIf="!searchBlog" [@fadeIn]><i class="fas fa-search search-icon"></i></span>
 
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="articles-listing">
+        <div class="row" *ngIf="blogs.length" [@fadeInGrow]>
+          <div class="col-lg-6" *ngFor="let blog of blogs;index as i">
+            <div class="card article-card" (click)="toBlogDetail(blog)">
+              <div class="article-image-holder">
+                <img [src]="blog.thumbnail" loading="lazy" alt="image">
+              </div>
+
+              <div>
+                <h4 class="podcast-title">{{blog.title}}</h4>
+                <div class="description" [innerHTML]="blog.introText"></div>
+                <small class="time"> {{blog.pubDate | date : 'MMM y' }}</small>
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
     </div>
-
-
-    <div class="podcasts-listing">
-      <div class="row" *ngIf="blogs.length" [@fadeInGrow]>
-        <div class="col-md-4 col-lg-3" *ngFor="let blog of blogs;index as i">
-          <div class="card podcast-card" (click)="toBlogDetail(blog)">
-            <div class="image-holder">
-              <img [src]="blog.thumbnail" alt="image">
-            </div>
-
-            <div>
-              <h4>{{blog.title}}</h4>
-              <!-- <small class="blog-pubDate flex-fill"><span><i class="far fa-calendar-alt"></i></span> {{blog.pubDate }}</small> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+</div>
 </div>

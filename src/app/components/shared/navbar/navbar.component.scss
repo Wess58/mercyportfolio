@@ -17,15 +17,20 @@
       // font-family: 'Roboto', sans-serif;
       color: #5f6063;
       position: relative;
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 600;
       // font-weight: 600;
+
+      &::selection{
+        background-color: transparent;
+      }
+
     }
 
     .nav-link:after {
       position: absolute;
       left: 0;
-      height: 4px;
+      height: 5px;
       background: #80868b;
       content: "";
       opacity: 0;
@@ -53,7 +58,6 @@
       position: absolute;
       left: 0;
       height: 4px;
-      width: 40px;
       background: #4673b6!important;
       opacity: 1!important;
       width: 40px!important;
@@ -70,7 +74,7 @@
   top: 15px;
   border: none;
   outline: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #3c4043;
 }
 

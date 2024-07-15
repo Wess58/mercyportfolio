@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit } from '@angular/core';
 import { style, state, animate, transition, trigger } from '@angular/animations';
 
 
@@ -17,10 +17,19 @@ import { style, state, animate, transition, trigger } from '@angular/animations'
 })
 export class AboutComponent implements OnInit {
 
+  animateAfterViewInit = false;
+
   constructor() { }
 
   ngOnInit(): void {
     window.scroll(0, 0);
   }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.animateAfterViewInit = true;
+    }, 200);
+  }
+
 
 }
