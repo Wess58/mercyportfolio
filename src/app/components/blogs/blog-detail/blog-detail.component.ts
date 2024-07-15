@@ -52,8 +52,8 @@ export class BlogDetailComponent implements OnInit {
 
         this.blogs.forEach((blog: any, index: any) => {
           const emCollection = new DOMParser().parseFromString(blog.content, "text/html").documentElement.getElementsByTagName("figure");
-          const imgSrc = new DOMParser().parseFromString(emCollection[0].innerHTML, "text/html").querySelectorAll('img')[0].src;
-          blog.thumbnail = imgSrc;
+          const imgSrc = new DOMParser().parseFromString(emCollection[0]?.innerHTML, "text/html").querySelectorAll('img')[0]?.src;
+          blog.thumbnail = imgSrc ?? 'assets/images/podcast-imgs/seo-img-the-walk-by-mercy.jpg';
 
           if (blog.guid.toLowerCase().includes(localGuid.toLowerCase())) {
             this.blog = blog;
