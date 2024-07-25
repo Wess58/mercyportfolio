@@ -1,6 +1,56 @@
 {
   "podcasts": [
     {
+    "title":"You have come to Mount Zion",
+    "description":"Hebrews 12:22-24- But you have come to Mount Zion, to the city of the living God, the heavenly Jerusalem. You have come to thousands upon thousands of angels in joyful assembly, to the church of the firstborn, whose names are written in heaven. You have come to God, the Judge of all, to the spirits of the righteous made perfect, to Jesus the mediator of a new covenant, and to the sprinkled blood that speaks a better word than the blood of Abel",
+    "imgUrl": "assets/images/podcast-imgs/seo-img-the-walk-by-mercy.jpg",
+    "iframe":"<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/4EF3zrJStJijT2JwKEFBRq?utm_source=generator\" width=\"100%\" height=\"150\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "time": "4 min",
+    "date":"July 2024",
+    "applePodcast":"https://podcasts.apple.com/ke/podcast/you-have-come-to-mount-zion/id1690340521?i=1000662370354",
+    "spotify":"https://open.spotify.com/episode/4EF3zrJStJijT2JwKEFBRq?si=5iom0sE_T2-xW9uSL91iSA"
+    },
+    {
+    "title":"Proclamation - Victory Belongs to Jesus",
+    "description":"What if the key to overcoming your toughest workplace struggles lies in a timeless biblical principle? Join us as we unpack the profound wisdom of Ecclesiastes 10:4 and explore how maintaining gentleness and calmness can transform your approach to challenges. Drawing from personal experiences, we discuss the importance of pausing, breathing, and assessing whether difficulties are rooted internally or externally, all while striving to meet expectations and deliver results. <br><br> In this episode, we explore the mantra \"Don't resign in defeat, resign from the mountain,\" urging you to hand over your battles to God and seek guidance through prayer and faith. Discover how biblical figures like Moses found strength by surrendering their struggles and allowing God to fight on their behalf. We encourage you to stay the course, trust in God's timing, and resign on His terms, from a place of victory. This conversation is a powerful reminder to seek God's guidance and find the strength to remain calm and steadfast in the face of adversity.",
+    "imgUrl": "assets/images/podcast-imgs/seo-img-the-walk-by-mercy.jpg",
+    "iframe":"<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/171dj63PLZfL6YyIZad9GG?utm_source=generator\" width=\"100%\" height=\"150\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "time": "7 min",
+    "date":"July 2024",
+    "applePodcast":"https://podcasts.apple.com/ke/podcast/proclamation-victory-belongs-to-jesus/id1690340521?i=1000661616228",
+    "spotify":"https://open.spotify.com/episode/171dj63PLZfL6YyIZad9GG?si=ygkqpc8pTPa3typzVLrHhQ"
+    },
+    {
+    "title":"Ever Heard the Lord Singing over you?",
+    "description":"Zephaniah 3:17 The Lord Singing over you",
+    "imgUrl": "assets/images/podcast-imgs/seo-img-the-walk-by-mercy.jpg",
+    "iframe":"<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/3rjSniolQ8PcbaTsqvx55V?utm_source=generator\" width=\"100%\" height=\"150\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "time": "3 min",
+    "date":"July 2024",
+    "applePodcast":"https://podcasts.apple.com/ke/podcast/ever-heard-the-lord-singing-over-you/id1690340521?i=1000660754921",
+    "spotify":"https://open.spotify.com/episode/3rjSniolQ8PcbaTsqvx55V?si=cmSPdjnqSm64hm_x_S7wOg"
+    },
+    {
+    "title":"Prayer to approach the throne of Grace with confidence ",
+    "description":"Ever wondered how Apostle Paul's teachings on grace can transform your life? In this episode, we promise to uncover the depth of grace as outlined in the New Testament, particularly through the lens of Apostle Paul's letters. We'll dissect powerful scriptures like 1 Corinthians 15:10 and Hebrews 13:25, providing a clear understanding of how grace empowers us to overcome life's challenges and achieve the seemingly impossible. <br><br> Join us as we offer a heartfelt prayer, seeking divine grace to navigate our daily struggles. We'll express gratitude for the grace that has sustained us and ask for continued support in the days ahead. Whether you're looking for encouragement or a deeper spiritual connection, this episode serves as a nourishing reminder of the boundless grace available through God's love, as exemplified by Jesus Christ. Tune in for a spiritually enriching experience that will leave you feeling uplifted and empowered.",
+    "imgUrl": "assets/images/podcast-imgs/seo-img-the-walk-by-mercy.jpg",
+    "iframe":"<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/1r31iIFnNkvXwLdX9JbAe7?utm_source=generator\" width=\"100%\" height=\"150\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "time": "5 min",
+    "date":"June 2024",
+    "applePodcast":"https://podcasts.apple.com/ke/podcast/prayer-to-approach-the-throne-of-grace-with-confidence/id1690340521?i=1000660137878",
+    "spotify":"https://open.spotify.com/episode/1r31iIFnNkvXwLdX9JbAe7?si=zWTrrBbTT6Gdxoz4tzyN2A"
+    },
+    {
+    "title":"PURPOSE GOD'S WAY - FIND MOTIVATION USING THE WORD OF GOD",
+    "description":"FIND MOTIVATION USING THE WORD OF GOD",
+    "imgUrl": "assets/images/podcast-imgs/seo-img-the-walk-by-mercy.jpg",
+    "iframe":"",
+    "time": "5 min",
+    "date":"Feb 2024",
+    "applePodcast":"https://podcasts.apple.com/ke/podcast/purpose-gods-way-find-motivation-using-the-word-of-god/id1690340521?i=1000647189294",
+    "spotify":""
+    },
+    {
     "title":"PURPOSE GOD’S WAY- Harnessing the Transformative Power of Prayer for Nations and Global Revival",
     "description":"Praying for Nations and reaping the Inheritance ",
     "imgUrl": "assets/images/podcast-imgs/seo-img-the-walk-by-mercy.jpg",
