@@ -1,8 +1,9 @@
+<div class="bg-image-ms d-block d-md-none"></div>
+
 <div class="podcasts position-relative" [@fadeIn]>
   <!-- <img src="assets/images/yellow-blob.svg" id="yellow-blob-podcasts" alt=""> -->
 
   <!-- <img src="assets/images/blue-blob-2.svg" id="blue-blob-podcasts" alt=""> -->
-
 
   <div class="container">
 
@@ -39,8 +40,8 @@
               </div>
 
               <div class="podcast-content-container">
-                <div class="podcast-content">
-                  <h4 [routerLink]="['/podcast', i]" (click)="storeToLocal(i)">{{podcast.title}}</h4>
+                <div class="podcast-content" [routerLink]="['/podcast', i]" (click)="storeToLocal(i)">
+                  <h4 >{{podcast.title}}</h4>
                   <span class="time"> {{podcast.date}} <i class="fa-solid fa-circle"></i> {{podcast.time}}</span>
                 </div>
 

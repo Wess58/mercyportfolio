@@ -247,6 +247,22 @@
     }
   }
 }
+
+
+ .bg-image-ms{
+     background: url('../../../../assets/images/blob-scene-mobile.svg'),url('../../../../assets/images/blob-scene-mobile.png')!important;
+    background-repeat: no-repeat!important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: contain!important;
+    background-attachment: scroll!important;
+    background-position: top!important;
+    width: 100vw!important;
+    height: 100vh!important;
+    position: fixed!important;
+  }
+
 @media (max-width: 1380px) {
   .container {
     min-width: 100%!important;
@@ -256,7 +272,8 @@
 @media (max-width: 1100px) {
 
   .podcasts{
-    background: url('../../../../assets/images/blob-scene-mobile.svg')!important;
+    background: none!important;
+    //  url('../../../../assets/images/blob-scene-mobile.svg')!important;
     background-repeat: no-repeat!important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -265,7 +282,6 @@
     background-attachment: fixed!important;
     background-position: top!important;
   }
-
 
   .floating-iframe-laptop {
     top: auto!important;
